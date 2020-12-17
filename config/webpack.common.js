@@ -30,6 +30,13 @@ module.exports = {
             ignore: ['*.DS_Store'],
           },
         },
+        {
+          from: paths.images,
+          to: 'images',
+          globOptions: {
+            ignore: ['*.DS_Store'],
+          },
+        },
       ],
     }),
 

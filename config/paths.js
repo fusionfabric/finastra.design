@@ -4,6 +4,9 @@ module.exports = {
   // Source files
   src: path.resolve(__dirname, '../src'),
 
+  //images files
+  images: path.resolve(__dirname, '../src/images'),
+
   // Production build files
   build: path.resolve(__dirname, '../dist'),
 

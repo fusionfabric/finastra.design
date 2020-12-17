@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+}
+
+.header {
+  --header-title-line-bg-shift: 8px;
+  --header-title-line-bg-margin: -16px;
+  --header-title-target-size: 4vw;
+  --header-title-font-size: clamp(1.5rem, 4vw, 4rem);
+
+  position: relative;
+  background: center center / 100% 100% no-repeat
+    url("../images/home/header/bg.svg");
+  font: 700 60px Futura;
+  color: white;
+  height: 660px;
+  padding: 24px;
+
+  .logo {
+    font-size: 30px;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+  }
+
+  .title {
+    position: absolute;
+    bottom: 120px;
+    left: 15%;
+    font-size: var(--header-title-font-size);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 0;
+
+    &::before {
+      content: "";
+      position: relative;
+      background: url("../images/home/header/icon-yellow.svg") no-repeat;
+      width: var(--header-title-target-size);
+      height: var(--header-title-target-size);
+      margin-left: calc(-1 * var(--header-title-target-size));
+    }
+
+    .title-line {
+      position: relative;
+      background-color: black;
+      padding: 8px;
+
+      .title-animation {
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: bottom;
+      }
+      .title-emphasis {
+        color: #f32393;
+        display: inline-block;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        margin-top: var(--header-title-line-bg-margin) / 2;
+        margin-left: var(--header-title-line-bg-margin) / 2;
+        background-color: white;
+        transform: translate(
+          var(--header-title-line-bg-shift),
+          var(--header-title-line-bg-shift)
+        );
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+    }
+  }
+
+  .team-images {
+    background: url("../images/home/header/dash.svg") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 72px;
+    width: 55%;
+    height: 488px;
+    left: 30%;
+
+    .img1,
+    .img2,
+    .img3,
+    .crop-mark {
+      position: absolute;
+      height: auto;
+    }
+
+    .img1 {
+      width: 60%;
+      max-width: 577px;
+      left: 3%;
+      top: 16%;
+    }
+
+    .img2 {
+      width: 35%;
+      right: 11%;
+      top: 3%;
+    }
+
+    .img3 {
+      height: 42%;
+      right: 3%;
+      bottom: 4%;
+    }
+
+    .crop-mark {
+      top: -5%;
+      right: 6%;
+    }
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+  .header {
+    .title {
+      .mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+/*Tablet styles*/
+@media (min-width: 700px) and (max-width: 1024px) {
+  .header {
+    --header-title-target-size: 6vw;
+    --header-title-font-size: 8vw;
+
+    .title {
+      bottom: 150px;
+      left: 10%;
+
+      .mobile {
+        display: none;
+      }
+    }
+
+    .team-images {
+      width: 72%;
+      height: 344px;
+      left: 20%;
+    }
+  }
+}
+
+/*Mobile styles*/
+@media (max-width: 699px) {
+  .header {
+    --header-title-target-size: 6vw;
+    --header-title-font-size: 11vw;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    .logo {
+      font-size: 15px;
+    }
+    .title {
+      order: 1;
+      position: relative;
+      bottom: unset;
+      left: unset;
+      margin-bottom: 5px;
+
+      .desktop {
+        display: none;
+      }
+
+      .title-line {
+        margin-bottom: 15px;
+        padding: 14px;
+
+        &::before {
+          margin-top: var(--header-title-line-bg-margin);
+          margin-left: var(--header-title-line-bg-margin);
+        }
+      }
+    }
+    .team-images {
+      order: 2;
+      position: relative;
+      width: 100%;
+      top: unset;
+      left: unset;
+      right: unset;
+      height: 175px;
+
+      .img1 {
+        max-width: 300px;
+      }
+
+      .crop-mark {
+        top: unset;
+        right: unset;
+        bottom: 5%;
+        left: -5%;
+      }
+    }
+  }
+}
