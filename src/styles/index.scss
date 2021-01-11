@@ -116,6 +116,21 @@ body {
   }
 }
 
+.content {
+  --content-introduction-font-size: clamp(1rem, 2vw, 2rem);
+  .introduction {
+    font: 300 60px Roboto;
+    margin: 70px auto;
+    width: 70%;
+    font-size: var(--content-introduction-font-size);
+    .intro-text {
+      .focus {
+        color: #f32393;
+      }
+    }
+  }
+}
+
 /* Desktop styles */
 @media (min-width: 1025px) {
   .header {
