@@ -46,6 +46,9 @@ module.exports = {
       title: 'finastra.design',
       template: paths.src + '/home-page.html', // template file
       filename: 'index.html', // output file
+      minify: {
+        collapseWhitespace: false
+      }
     }),
   ],
 
