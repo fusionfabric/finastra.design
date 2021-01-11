@@ -51,6 +51,7 @@ body {
         overflow: hidden;
         vertical-align: bottom;
       }
+
       .title-emphasis {
         color: #f32393;
         display: inline-block;
@@ -117,16 +118,81 @@ body {
 }
 
 .content {
-  --content-introduction-font-size: clamp(1rem, 2vw, 2rem);
+  --content-intro-font-size: clamp(1rem, 2.5vw, 2.5rem);
+  --content-intro-text-padding: 10px;
+  --content-intro-border-font-size: 3em;
+  --content-intro-border-padding: 0.5em;
+  --content-intro-border-background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  --content-intro-border-background-img: repeating-linear-gradient(
+    0deg,
+    var(--clr-border),
+    var(--clr-border) 8px,
+    transparent 0px,
+    transparent 17px
+  );
+  --clr-border: rgb(138, 135, 135);
+  position: relative;
+
   .introduction {
     font: 300 60px Roboto;
     margin: 70px auto;
     width: 70%;
-    font-size: var(--content-introduction-font-size);
-    .intro-text {
+    font-size: var(--content-intro-font-size);
+
+    img {
+      width: 47px;
+    }
+
+    .text-border {
+      position: relative;
+      padding: var(--content-intro-text-padding) 0
+        var(--content-intro-text-padding) 0;
+
+      .intro-text {
+        margin: var(--content-intro-text-padding);
+      }
+
       .focus {
         color: #f32393;
       }
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: -4%;
+        font-size: var(--content-intro-border-font-size);
+        padding: var(--content-intro-border-padding);
+        background-size: var(--content-intro-border-background-size);
+        background-repeat: no-repeat;
+        background-image: var(--content-intro-border-background-img);
+        transform: rotate(90deg);
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        left: -4%;
+        font-size: var(--content-intro-border-font-size);
+        padding: var(--content-intro-border-padding);
+        background-size: var(--content-intro-border-background-size);
+        background-repeat: no-repeat;
+        background-image: var(--content-intro-border-background-img);
+        transform: rotate(90deg);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 14%;
+      height: 72%;
+      font-size: var(--content-intro-border-font-size);
+      padding: var(--content-intro-border-padding);
+      background-size: var(--content-intro-border-background-size);
+      background-repeat: no-repeat;
+      background-image: var(--content-intro-border-background-img);
     }
   }
 }
@@ -137,6 +203,14 @@ body {
     .title {
       .mobile {
         display: none;
+      }
+    }
+  }
+
+  .content {
+    .introduction {
+      &::after {
+        height: 52%;
       }
     }
   }
@@ -178,6 +252,7 @@ body {
     .logo {
       font-size: 15px;
     }
+
     .title {
       order: 1;
       position: relative;
@@ -199,6 +274,7 @@ body {
         }
       }
     }
+
     .team-images {
       order: 2;
       position: relative;
@@ -217,6 +293,15 @@ body {
         right: unset;
         bottom: 5%;
         left: -5%;
+      }
+    }
+  }
+
+  .content {
+    .introduction {
+      img {
+        width: 37px;
+        margin-left: var(--content-intro-text-padding);
       }
     }
   }
