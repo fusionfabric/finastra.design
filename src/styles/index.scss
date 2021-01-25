@@ -195,6 +195,51 @@ body {
       background-image: var(--content-intro-border-background-img);
     }
   }
+
+  .mission {
+    margin-left: 15%;
+
+    .mission-title {
+      background: url("../images/home/content/mission/carrés.png") no-repeat;
+      background-size: 100% 45%;
+      position: absolute;
+      padding-right: 5em;
+
+      p {
+        position: relative;
+        bottom: 2em;
+        font: 43px FuturaEF-Bold;
+        color: #414141;
+      }
+
+      &::before {
+        content: "";
+        background-image: url("../images/home/content/mission/icon-location-arrow.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 20%;
+        height: 60px;
+        right: 3.5em;
+        top: 16px;
+        position: relative;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 100%;
+        top: 46%;
+        font-size: 6em;
+        padding: 1em;
+        background-size: var(--content-intro-border-background-size);
+        background-repeat: no-repeat;
+        background-image: var(--content-intro-border-background-img);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+  }
 }
 
 /* Desktop styles */
@@ -302,6 +347,19 @@ body {
       img {
         width: 37px;
         margin-left: var(--content-intro-text-padding);
+      }
+    }
+
+    .mission {
+      .mission-title {
+        p {
+          font: 26px FuturaEF-Bold;
+          bottom: 2.6em;
+          left: 0.5em;
+        }
+        &::before {
+          right: 1.5em;
+        }
       }
     }
   }
