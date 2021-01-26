@@ -131,10 +131,12 @@ body {
     transparent 17px
   );
   --clr-border: rgb(138, 135, 135);
+  --content-mission-text-title-font-size: clamp(1.5rem, 2vw, 2rem);
+  --content-mission-text-content-font-size: clamp(1rem, 1.5vw, 1.5rem);
   position: relative;
 
   .introduction {
-    font: 300 60px Roboto;
+    font: 24px Roboto;
     margin: 70px auto;
     width: 70%;
     font-size: var(--content-intro-font-size);
@@ -197,17 +199,18 @@ body {
   }
 
   .mission {
-    margin-left: 15%;
+    position: absolute;
+    margin-left: 14%;
 
     .mission-title {
       background: url("../images/home/content/mission/carrés.png") no-repeat;
       background-size: 100% 45%;
       position: absolute;
-      padding-right: 5em;
+      padding-right: 80px;
 
       p {
         position: relative;
-        bottom: 2em;
+        bottom: 85px;
         font: 43px FuturaEF-Bold;
         color: #414141;
       }
@@ -220,7 +223,7 @@ body {
         display: inline-block;
         width: 20%;
         height: 60px;
-        right: 3.5em;
+        right: 56px;
         top: 16px;
         position: relative;
       }
@@ -230,13 +233,77 @@ body {
         position: absolute;
         right: 100%;
         top: 46%;
-        font-size: 6em;
+        font-size: 96px;
         padding: 1em;
         background-size: var(--content-intro-border-background-size);
         background-repeat: no-repeat;
         background-image: var(--content-intro-border-background-img);
-        -webkit-transform: rotate(180deg);
         transform: rotate(180deg);
+      }
+    }
+
+    .mission-content {
+      position: relative;
+      display: flex;
+      top: 112px;
+
+      .mission-text {
+        margin-left: 24px;
+        font: 32px Roboto;
+        width: 50%;
+
+        .mission-text-title {
+          font-weight: 550;
+          font-size: var(--content-mission-text-title-font-size);
+          margin-top: 8px;
+          display: block;
+        }
+
+        .mission-text-content {
+          font-size: var(--content-mission-text-content-font-size);
+        }
+
+        &::before {
+          position: absolute;
+          content: "";
+          border-radius: 0px 10px 10px 0px;
+          background: #56f28c;
+          padding: 20px;
+          width: 20%;
+          left: -30%;
+        }
+      }
+
+      .mission-image {
+        margin-left: 10%;
+        
+        .first-mission {
+          .img-1 {
+            height: auto;
+            width: 90%;
+            transform: rotate(-6deg);
+            max-width: 577px;
+          }
+
+          &::before {
+            position: absolute;
+            content: "";
+            background: transparent linear-gradient(180deg, #30D897 0%, #56F28C 100%) 0% 0% no-repeat padding-box;
+            width: 30%;
+            height: 58%;
+            transform: translate(-24px);
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            background: url("../images/home/content/mission/icon-arrow.svg") no-repeat;
+            height: 35%;
+            width: 10%;
+            top: 83%;
+            right: 31%;
+          }
+        }
       }
     }
   }
@@ -280,6 +347,24 @@ body {
       width: 72%;
       height: 344px;
       left: 20%;
+    }
+  }
+
+  .content {
+    .mission {
+      .mission-content {
+        .mission-image {
+          .first-mission {
+            &::after {
+              height: 36%;
+              width: 19%;
+              max-height: 500px;
+              top: 84%;
+              right: 37%;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -354,11 +439,42 @@ body {
       .mission-title {
         p {
           font: 26px FuturaEF-Bold;
-          bottom: 2.6em;
-          left: 0.5em;
+          bottom: 68px;
+          left: 8px;
         }
         &::before {
-          right: 1.5em;
+          right: 24px;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+
+      .mission-content {
+        flex-direction: column;
+        .mission-text {
+          &::before {
+            width: 18%;
+          }
+        }
+
+        .mission-image {
+          .first-mission {
+            margin-top: 20px;
+
+            &::before {
+              transform: translate(-14px);
+              width: 40%;
+              height: 35%;
+            }
+
+            &::after {
+              height: 26%;
+              width: 70%;
+              top: 87%;
+            }
+          }
         }
       }
     }
