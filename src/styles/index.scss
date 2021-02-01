@@ -126,17 +126,27 @@ body {
   --content-intro-border-background-img: repeating-linear-gradient(
     0deg,
     var(--clr-border),
-    var(--clr-border) 8px,
+    var(--clr-border) 10px,
     transparent 0px,
     transparent 17px
   );
   --clr-border: rgb(138, 135, 135);
+
   --content-mission-text-title-font-size: clamp(1.5rem, 2vw, 2rem);
   --content-mission-text-content-font-size: clamp(1rem, 1.5vw, 1.5rem);
+  --content-mission-tag-width: 20%;
+  --content-mission-background: url("../images/home/content/mission/icon-arrow.svg")
+    no-repeat;
+  --content-mission-image-background: linear-gradient(
+      180deg,
+      #30d897 0%,
+      #56f28c 100%
+    )0% 0%;
+  --content-mission-tag-color: #56f28c;
   position: relative;
 
   .introduction {
-    font: 24px Roboto;
+    font: 300 24px/48px Roboto, roboto, Helvetica Neue, sans-serif;
     margin: 70px auto;
     width: 70%;
     font-size: var(--content-intro-font-size);
@@ -233,6 +243,7 @@ body {
         position: absolute;
         right: 100%;
         top: 46%;
+        height: 50%;
         font-size: 96px;
         padding: 1em;
         background-size: var(--content-intro-border-background-size);
@@ -247,19 +258,28 @@ body {
       display: flex;
       top: 112px;
 
-      .mission-text {
+      .mission-text-1,
+      .mission-text-2,
+      .mission-text-3 {
         margin-left: 24px;
-        font: 32px Roboto;
-        width: 50%;
+        margin-bottom: 24px;
+        width: 80%;
 
-        .mission-text-title {
+        .mission-text-title-1,
+        .mission-text-title-2,
+        .mission-text-title-3 {
+          font: 300 32px/60px Roboto, roboto, Helvetica Neue, sans-serif;
           font-weight: 550;
           font-size: var(--content-mission-text-title-font-size);
           margin-top: 8px;
           display: block;
+          transition: all 0.5s linear;
         }
 
-        .mission-text-content {
+        .mission-text-content-1,
+        .mission-text-content-2,
+        .mission-text-content-3 {
+          font: 300 24px/32px Roboto, roboto, Helvetica Neue, sans-serif;
           font-size: var(--content-mission-text-content-font-size);
         }
 
@@ -267,42 +287,44 @@ body {
           position: absolute;
           content: "";
           border-radius: 0px 10px 10px 0px;
-          background: #56f28c;
+          background: var(--content-mission-tag-color);
           padding: 20px;
-          width: 20%;
+          width: var(--content-mission-tag-width);
           left: -30%;
+          margin-top: 12px;
+          transition: all 0.5s linear;
         }
       }
 
       .mission-image {
-        margin-left: 10%;
+        margin-left: 16px;
+        transition: all 0.5s linear;
         
-        .first-mission {
-          .img-1 {
-            height: auto;
-            width: 90%;
-            transform: rotate(-6deg);
-            max-width: 577px;
-          }
+        .img-1 {
+          height: auto;
+          width: 90%;
+          transform: rotate(-6deg);
+          max-width: 577px;
+        }
 
-          &::before {
-            position: absolute;
-            content: "";
-            background: transparent linear-gradient(180deg, #30D897 0%, #56F28C 100%) 0% 0% no-repeat padding-box;
-            width: 30%;
-            height: 58%;
-            transform: translate(-24px);
-          }
+        &::before {
+          position: absolute;
+          content: "";
+          background: transparent var(--content-mission-image-background)
+            no-repeat padding-box;
+          width: 30%;
+          height: 58%;
+          transform: translate(-24px);
+        }
 
-          &::after {
-            content: "";
-            position: absolute;
-            background: url("../images/home/content/mission/icon-arrow.svg") no-repeat;
-            height: 35%;
-            width: 10%;
-            top: 83%;
-            right: 31%;
-          }
+        &::after {
+          content: "";
+          position: absolute;
+          background: var(--content-mission-background);
+          height: 35%;
+          width: 10%;
+          top: 83%;
+          right: 31%;
         }
       }
     }
@@ -354,14 +376,9 @@ body {
     .mission {
       .mission-content {
         .mission-image {
-          .first-mission {
-            &::after {
-              height: 36%;
-              width: 19%;
-              max-height: 500px;
-              top: 84%;
-              right: 37%;
-            }
+          &::before {
+            width: 40%;
+            height: 55%;
           }
         }
       }
@@ -429,6 +446,7 @@ body {
 
   .content {
     .introduction {
+      line-height: 24px;
       img {
         width: 37px;
         margin-left: var(--content-intro-text-padding);
@@ -454,26 +472,32 @@ body {
       .mission-content {
         flex-direction: column;
         .mission-text {
+
           &::before {
             width: 18%;
+          }
+
+          .mission-text-1,
+          .mission-text-2,
+          .mission-text-3 {
+            width: 85%;
           }
         }
 
         .mission-image {
-          .first-mission {
-            margin-top: 20px;
+          margin-top: 20px;
 
-            &::before {
-              transform: translate(-14px);
-              width: 40%;
-              height: 35%;
-            }
+          &::before {
+            transform: translate(-14px);
+            width: 40%;
+            height: 25%;
+          }
 
-            &::after {
-              height: 26%;
-              width: 70%;
-              top: 87%;
-            }
+          &::after {
+            height: 20%;
+            width: 30%;
+            top: 93%;
+            right: 56%;
           }
         }
       }
