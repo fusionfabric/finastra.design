@@ -117,7 +117,7 @@ function show3() {
   document.getElementsByClassName("mission-text-3")[0].style.setProperty("--content-mission-tag-width", '20%');
 
   document.getElementsByClassName("mission-image")[0].style.setProperty("--content-mission-image-background",'linear-gradient(180deg,#E945C1 0%, #E945C1 100%) 0% 0%');
-  document.getElementsByClassName("mission-image")[0].style.setProperty("--content-mission-background", 'url("./images/home/content/mission/pen.svg") no-repeat');
+  document.getElementsByClassName("mission-image")[0].style.setProperty("--content-mission-background", 'url("./images/home/content/mission/compas.svg") no-repeat');
 }
 
 
