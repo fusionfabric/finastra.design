@@ -118,7 +118,7 @@ body {
 }
 
 .content {
-  --content-intro-font-size: clamp(1rem, 2.5vw, 2.5rem);
+  --content-intro-font-size: clamp(1rem, 2vw, 2rem);
   --content-intro-text-padding: 10px;
   --content-intro-border-font-size: 3em;
   --content-intro-border-padding: 0.5em;
@@ -132,7 +132,8 @@ body {
   );
   --clr-border: rgb(138, 135, 135);
 
-  --content-mission-text-title-font-size: clamp(1.4rem, 1.7vw, 1.7rem);
+  --content-mission-title-font-size: clamp(1.5rem, 2.2vw, 2.2rem);
+  --content-mission-text-title-font-size: clamp(1.2rem, 1.7vw, 1.7rem);
   --content-mission-text-content-font-size: clamp(1rem, 1.5vw, 1.5rem);
   --content-mission-tag-width: 20%;
   --content-mission-image-icon: url("../images/home/content/mission/icon-arrow.svg");
@@ -206,8 +207,10 @@ body {
         position: relative;
         bottom: 85px;
         font: 43px FuturaEF-Bold;
+        font-size: var(--content-mission-title-font-size);
         color: #414141;
         padding-left: 8px;
+        margin-top: 48px;
       }
 
       &::before {
@@ -219,7 +222,7 @@ body {
         background-repeat: no-repeat;
         width: 20%;
         height: 60px;
-        right: 46px;
+        right: 30px;
         top: 16px;
       }
 
@@ -253,7 +256,7 @@ body {
         .mission-text-title-2,
         .mission-text-title-3 {
           font: 300 32px/60px Roboto, roboto, Helvetica Neue, sans-serif;
-          font-weight: 550;
+          font-weight: 500;
           font-size: var(--content-mission-text-title-font-size);
           margin-top: 8px;
           display: block;
@@ -332,6 +335,12 @@ body {
 
   .content {
     .mission {
+      .mission-title {
+        p {
+          padding-left: 32px;
+        }
+      }
+
       .mission-content {
         .mission-text {
           width: 800px;
@@ -365,7 +374,12 @@ body {
 
   .content {
     .introduction {
-      &::after{
+      .text-border {
+        .intro-text {
+          font-size: 2.5vh;
+        }
+      }
+      &::after {
         height: 80%;
       }
     }
@@ -458,7 +472,7 @@ body {
         width: 37px;
         margin-left: var(--content-intro-text-padding);
       }
-      &::after{
+      &::after {
         height: 86%;
       }
     }
@@ -466,8 +480,6 @@ body {
     .mission {
       .mission-title {
         p {
-          font: 26px FuturaEF-Bold;
-          bottom: 68px;
           left: 8px;
         }
         &::before {
