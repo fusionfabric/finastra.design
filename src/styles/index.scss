@@ -132,7 +132,7 @@ body {
   );
   --clr-border: rgb(138, 135, 135);
 
-  --content-mission-text-title-font-size: clamp(1.5rem, 2vw, 2rem);
+  --content-mission-text-title-font-size: clamp(1.4rem, 1.7vw, 1.7rem);
   --content-mission-text-content-font-size: clamp(1rem, 1.5vw, 1.5rem);
   --content-mission-tag-width: 20%;
   --content-mission-image-icon: url("../images/home/content/mission/icon-arrow.svg");
@@ -183,7 +183,7 @@ body {
       bottom: 0;
       top: 0;
       left: 14%;
-      height: 72%;
+      height: 60%;
       font-size: var(--content-intro-border-font-size);
       padding: var(--content-intro-border-padding);
       background-size: var(--content-intro-border-background-size);
@@ -207,6 +207,7 @@ body {
         bottom: 85px;
         font: 43px FuturaEF-Bold;
         color: #414141;
+        padding-left: 8px;
       }
 
       &::before {
@@ -218,7 +219,7 @@ body {
         background-repeat: no-repeat;
         width: 20%;
         height: 60px;
-        right: 56px;
+        right: 46px;
         top: 16px;
       }
 
@@ -245,8 +246,6 @@ body {
       .mission-text-1,
       .mission-text-2,
       .mission-text-3 {
-        /* margin-left: 24px;
-        margin-bottom: 24px;*/
         margin: 0 0 24px 24px;
         width: 80%;
 
@@ -332,11 +331,6 @@ body {
   }
 
   .content {
-    .introduction {
-      &::after {
-        height: 52%;
-      }
-    }
     .mission {
       .mission-content {
         .mission-text {
@@ -370,6 +364,12 @@ body {
   }
 
   .content {
+    .introduction {
+      &::after{
+        height: 80%;
+      }
+    }
+
     .mission {
       .mission-content {
         .mission-image {
@@ -457,6 +457,9 @@ body {
       img {
         width: 37px;
         margin-left: var(--content-intro-text-padding);
+      }
+      &::after{
+        height: 86%;
       }
     }
 
