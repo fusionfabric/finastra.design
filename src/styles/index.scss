@@ -135,14 +135,9 @@ body {
   --content-mission-text-title-font-size: clamp(1.5rem, 2vw, 2rem);
   --content-mission-text-content-font-size: clamp(1rem, 1.5vw, 1.5rem);
   --content-mission-tag-width: 20%;
-  --content-mission-background: url("../images/home/content/mission/icon-arrow.svg")
-    no-repeat;
-  --content-mission-image-background: linear-gradient(
-      180deg,
-      #30d897 0%,
-      #56f28c 100%
-    )0% 0%;
+  --content-mission-image-icon: url("../images/home/content/mission/icon-arrow.svg");
   --content-mission-tag-color: #56f28c;
+  --content-mission-second-gradient-color: #30d897;
   position: relative;
 
   .introduction {
@@ -168,18 +163,7 @@ body {
         color: #f32393;
       }
 
-      &::before {
-        position: absolute;
-        content: "";
-        left: -4%;
-        font-size: var(--content-intro-border-font-size);
-        padding: var(--content-intro-border-padding);
-        background-size: var(--content-intro-border-background-size);
-        background-repeat: no-repeat;
-        background-image: var(--content-intro-border-background-img);
-        transform: rotate(90deg);
-      }
-
+      &::before,
       &::after {
         position: absolute;
         content: "";
@@ -226,29 +210,29 @@ body {
       }
 
       &::before {
+        position: relative;
         content: "";
+        display: inline-block;
         background-image: url("../images/home/content/mission/icon-location-arrow.png");
         background-size: 100%;
         background-repeat: no-repeat;
-        display: inline-block;
         width: 20%;
         height: 60px;
         right: 56px;
         top: 16px;
-        position: relative;
       }
 
       &::after {
-        content: "";
         position: absolute;
+        content: "";
+        background-size: var(--content-intro-border-background-size);
+        background-repeat: no-repeat;
+        background-image: var(--content-intro-border-background-img);
         right: 100%;
         top: 46%;
         height: 50%;
         font-size: 96px;
         padding: 1em;
-        background-size: var(--content-intro-border-background-size);
-        background-repeat: no-repeat;
-        background-image: var(--content-intro-border-background-img);
         transform: rotate(180deg);
       }
     }
@@ -261,8 +245,9 @@ body {
       .mission-text-1,
       .mission-text-2,
       .mission-text-3 {
-        margin-left: 24px;
-        margin-bottom: 24px;
+        /* margin-left: 24px;
+        margin-bottom: 24px;*/
+        margin: 0 0 24px 24px;
         width: 80%;
 
         .mission-text-title-1,
@@ -299,7 +284,7 @@ body {
       .mission-image {
         margin-left: 16px;
         transition: all 0.5s linear;
-        
+
         .img-1 {
           height: auto;
           width: 90%;
@@ -310,18 +295,23 @@ body {
         &::before {
           position: absolute;
           content: "";
-          background: transparent var(--content-mission-image-background)
-            no-repeat padding-box;
+          background: transparent
+            linear-gradient(
+              180deg,
+              var(--content-mission-second-gradient-color) 0%,
+              var(--content-mission-tag-color) 100%
+            )
+            0% 0%;
           width: 30%;
           height: 58%;
           transform: translate(-24px);
         }
 
         &::after {
-          display: block;
-          content: "";
           position: absolute;
-          background: var(--content-mission-background);
+          content: "";
+          display: block;
+          background: var(--content-mission-image-icon) no-repeat;
           height: 35%;
           width: 10%;
           margin-top: -40px;
@@ -345,6 +335,13 @@ body {
     .introduction {
       &::after {
         height: 52%;
+      }
+    }
+    .mission {
+      .mission-content {
+        .mission-text {
+          width: 800px;
+        }
       }
     }
   }
@@ -380,13 +377,16 @@ body {
             width: 40%;
             height: 55%;
           }
-          
-          &::after{
+
+          &::after {
             display: block;
             height: 20%;
             width: 33%;
-  
           }
+        }
+
+        .mission-text {
+          width: 70%;
         }
       }
     }
@@ -423,8 +423,8 @@ body {
         padding: 14px;
 
         &::before {
-          margin-top: var(--header-title-line-bg-margin);
-          margin-left: var(--header-title-line-bg-margin);
+          margin: var(--header-title-line-bg-margin) 0 0
+            var(--header-title-line-bg-margin);
         }
       }
     }
@@ -479,7 +479,6 @@ body {
       .mission-content {
         flex-direction: column;
         .mission-text {
-
           &::before {
             width: 18%;
           }
