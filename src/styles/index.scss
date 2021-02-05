@@ -286,6 +286,25 @@ body {
       .mission-image {
         margin-left: 16px;
         transition: all 0.5s linear;
+        animation: slider 15s linear infinite;
+
+        @keyframes slider {
+          0% {
+            transform: translate(80%);
+          }
+          1% {
+            transform: translate(50%);
+          }
+          1.5% {
+            transform: translate(10%);
+          }
+          1.75% {
+            transform: translate(5%);
+          }
+          3% {
+            transform: translate(0%);
+          }
+        }
 
         .img-1 {
           height: auto;

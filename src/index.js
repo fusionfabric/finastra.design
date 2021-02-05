@@ -19,19 +19,19 @@ let run=async function(){
   show1();
   hide2();
   hide3();
-  await sleep(3000);
+  await sleep(5000);
   hide1();
   show2();
-  await sleep(3000);
+  await sleep(5000);
   hide2();
   show3();
-  await sleep(3000);
+  await sleep(5000);
 }
 
 run();
 window.setInterval(async function(){
   run();
-},10000);
+},15000);
 
 
 tl.to(".title-emphasis", {y: -100, duration: 0.5}, 1);
@@ -87,6 +87,7 @@ function show1() {
   document.getElementsByClassName("mission-text-content-1")[0].style.display = "block";
   document.getElementsByClassName("mission-text-title-1")[0].style.opacity="1";
   document.getElementsByClassName("img-1")["0"].src="./images/home/content/mission/img1.png";
+  document.getElementsByClassName("mission-image")[0].style.animationDelay="0s";
 
   document.getElementsByClassName("mission-text-1")[0].style.setProperty("--content-mission-tag-width", '20%');
   document.getElementsByClassName("mission-text-1")[0].style.setProperty("--content-mission-tag-color", '#56F28C');
@@ -94,13 +95,13 @@ function show1() {
   document.getElementsByClassName("mission-image")[0].style.setProperty("--content-mission-tag-color",'#56F28C');
   document.getElementsByClassName("mission-image")[0].style.setProperty("--content-mission-second-gradient-color",'#30D897');
   document.getElementsByClassName("mission-image")[0].style.setProperty("--content-mission-image-icon", 'url("./images/home/content/mission/icon-arrow.svg")');
-
 }
 
 function show2() {
   document.getElementsByClassName("mission-text-content-2")[0].style.display = "block";
   document.getElementsByClassName("mission-text-title-2")[0].style.opacity="1";
   document.getElementsByClassName("img-1")["0"].src="./images/home/content/mission/img2.png";
+  document.getElementsByClassName("mission-image")[0].style.animationDelay="5s";
 
   document.getElementsByClassName("mission-text-2")[0].style.setProperty("--content-mission-tag-width", '20%');
   document.getElementsByClassName("mission-text-2")[0].style.setProperty("--content-mission-tag-color", '#36D4F2');
@@ -114,15 +115,12 @@ function show3() {
   document.getElementsByClassName("mission-text-content-3")[0].style.display = "block";
   document.getElementsByClassName("mission-text-title-3")[0].style.opacity="1";
   document.getElementsByClassName("img-1")["0"].src="./images/home/content/mission/img3.png";
+  document.getElementsByClassName("mission-image")[0].style.animationDelay="10s";
 
   document.getElementsByClassName("mission-text-3")[0].style.setProperty("--content-mission-tag-color", '#E945C1');
   document.getElementsByClassName("mission-text-3")[0].style.setProperty("--content-mission-tag-width", '20%');
-  
+
   document.getElementsByClassName("mission-image")[0].style.setProperty("--content-mission-tag-color",'#E945C1');
   document.getElementsByClassName("mission-image")[0].style.setProperty("--content-mission-second-gradient-color",'#F918A1');
   document.getElementsByClassName("mission-image")[0].style.setProperty("--content-mission-image-icon", 'url("./images/home/content/mission/compas.svg")');
-
-
 }
-
-
