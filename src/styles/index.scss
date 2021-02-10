@@ -197,6 +197,7 @@ body {
   .mission {
     position: absolute;
     margin-left: 14%;
+    height: 500px;
 
     .mission-title {
       background: url("../images/home/content/mission/carrés.png") no-repeat;
@@ -235,7 +236,7 @@ body {
         background-image: var(--content-intro-border-background-img);
         right: 100%;
         top: 46%;
-        height: 50%;
+        height: 80%;
         font-size: 96px;
         padding: 1em;
         transform: rotate(180deg);
@@ -394,6 +395,9 @@ body {
         .img-3 {
           visibility: hidden;
         }
+        .img-1 .img-1-icon {
+          width: 40%;
+        }
 
         .img-1 img,
         .img-2 img,
@@ -436,7 +440,8 @@ body {
           display: block;
           height: 25%;
           width: 10%;
-          margin-top: -40px;
+          bottom: 46px;
+          margin-left: -18px;
         }
 
         .img-1::after {
@@ -495,7 +500,7 @@ body {
       .mission-image div {
         animation: show 15s ease infinite;
       }
-      
+
       .mission-image div.img-1 {
         animation-delay: 0s;
       }
@@ -509,7 +514,7 @@ body {
       .mission-image div img {
         animation: slider 15s ease infinite;
       }
- 
+
       .mission-image div.img-1 img {
         animation-delay: 0s;
       }
@@ -535,6 +540,7 @@ body {
 
   .content {
     .mission {
+      padding-left: 32px;
       .mission-title {
         p {
           padding-left: 32px;
@@ -543,9 +549,9 @@ body {
 
       .mission-content {
         .mission-text {
-          width: 68%;
+          width: 80%;
           div::before {
-            left:-35%
+            left: -35%;
           }
         }
       }
@@ -726,6 +732,8 @@ body {
             &::after {
               height: 30%;
               width: 22%;
+              bottom: -250px;
+              margin-left: -26px;
             }
           }
         }
