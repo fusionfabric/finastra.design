@@ -294,20 +294,25 @@ body {
 
         @keyframes content {
           0% {
+            height: 0;
             opacity: 0;
           }
-          5% {
+          10% {
+            height: 100px;
             visibility: visible;
             opacity: 1;
           }
           33% {
+            height: 100px;
             visibility: visible;
             opacity: 1;
           }
           38% {
+            height: 0;
             opacity: 0;
           }
           100% {
+            height: 0;
             opacity: 0;
           }
         }
@@ -315,6 +320,7 @@ body {
         .mission-text-content-1,
         .mission-text-content-2,
         .mission-text-content-3 {
+          display: inline-block;
           font: 300 24px/32px Roboto, roboto, Helvetica Neue, sans-serif;
           font-size: var(--content-mission-text-content-font-size);
           animation: content 15s ease infinite;
@@ -404,8 +410,8 @@ body {
         .img-3::before {
           position: absolute;
           content: "";
-          width: 20%;
-          height: 50%;
+          width: 32%;
+          height: 60%;
           transform: translate(-24px);
         }
 
@@ -470,7 +476,7 @@ body {
         0% {
           transform: translateX(100%);
         }
-        5% {
+        10% {
           transform: translateX(0%);
           transform: rotate(-6deg);
         }
@@ -489,7 +495,7 @@ body {
       .mission-image div {
         animation: show 15s ease infinite;
       }
-
+      
       .mission-image div.img-1 {
         animation-delay: 0s;
       }
@@ -503,7 +509,7 @@ body {
       .mission-image div img {
         animation: slider 15s ease infinite;
       }
-
+ 
       .mission-image div.img-1 img {
         animation-delay: 0s;
       }
@@ -538,6 +544,9 @@ body {
       .mission-content {
         .mission-text {
           width: 68%;
+          div::before {
+            left:-35%
+          }
         }
       }
     }
@@ -586,7 +595,7 @@ body {
           .img-3 {
             &::before {
               width: 25%;
-              height: 30%;
+              height: 50%;
             }
             &::after {
               display: block;
@@ -710,8 +719,8 @@ body {
             }
             &::before {
               transform: translate(-20px);
-              width: 38%;
-              height: 20%;
+              width: 45%;
+              height: 40%;
             }
 
             &::after {
