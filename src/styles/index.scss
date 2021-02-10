@@ -1,5 +1,9 @@
 body {
   margin: 0;
+  .wrapper {
+    position: relative;
+    overflow-x: hidden;
+  }
 }
 
 .header {
@@ -136,9 +140,6 @@ body {
   --content-mission-text-title-font-size: clamp(1.2rem, 1.7vw, 1.7rem);
   --content-mission-text-content-font-size: clamp(1rem, 1.5vw, 1.5rem);
   --content-mission-tag-width: 20%;
-  --content-mission-image-icon: url("../images/home/content/mission/icon-arrow.svg");
-  --content-mission-tag-color: #56f28c;
-  --content-mission-second-gradient-color: #30d897;
   position: relative;
 
   .introduction {
@@ -260,7 +261,55 @@ body {
           font-size: var(--content-mission-text-title-font-size);
           margin-top: 8px;
           display: block;
-          transition: all 0.5s linear;
+          color: grey;
+          animation: title 15s ease infinite;
+        }
+
+        @keyframes title {
+          0% {
+            color: grey;
+          }
+          5% {
+            color: black;
+          }
+          33% {
+            color: black;
+          }
+          38% {
+            color: grey;
+          }
+          100% {
+            color: grey;
+          }
+        }
+        .mission-text-title-1 {
+          animation-delay: 0s;
+        }
+        .mission-text-title-2 {
+          animation-delay: 5s;
+        }
+        .mission-text-title-3 {
+          animation-delay: 10s;
+        }
+
+        @keyframes content {
+          0% {
+            opacity: 0;
+          }
+          5% {
+            visibility: visible;
+            opacity: 1;
+          }
+          33% {
+            visibility: visible;
+            opacity: 1;
+          }
+          38% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 0;
+          }
         }
 
         .mission-text-content-1,
@@ -268,75 +317,201 @@ body {
         .mission-text-content-3 {
           font: 300 24px/32px Roboto, roboto, Helvetica Neue, sans-serif;
           font-size: var(--content-mission-text-content-font-size);
+          animation: content 15s ease infinite;
+        }
+
+        .mission-text-content-1 {
+          visibility: hidden;
+          animation-delay: 0s;
+        }
+        .mission-text-content-2 {
+          visibility: hidden;
+          animation-delay: 5s;
+        }
+        .mission-text-content-3 {
+          visibility: hidden;
+          animation-delay: 10s;
         }
 
         &::before {
           position: absolute;
           content: "";
           border-radius: 0px 10px 10px 0px;
-          background: var(--content-mission-tag-color);
           padding: 20px;
-          width: var(--content-mission-tag-width);
+          width: 20%;
           left: -30%;
           margin-top: 12px;
-          transition: all 0.5s linear;
         }
       }
 
-      .mission-image {
-        margin-left: 16px;
-        transition: all 0.5s linear;
-        animation: slider 15s linear infinite;
+      @keyframes tag {
+        0% {
+          width: 12%;
+        }
+        5% {
+          width: 20%;
+        }
+        33% {
+          width: 20%;
+        }
+        38% {
+          width: 12%;
+        }
+        100% {
+          width: 12%;
+        }
+      }
 
-        @keyframes slider {
-          0% {
-            transform: translate(100%);
-          }
-          1% {
-            transform: translate(50%);
-          }
-          1.5% {
-            transform: translate(10%);
-          }
-          1.75% {
-            transform: translate(5%);
-          }
-          3% {
-            transform: translate(0%);
-          }
+      .mission-text div::before {
+        float: left;
+        width: 12%;
+        animation: tag 15s ease infinite;
+      }
+
+      .mission-text .mission-text-1::before {
+        background: #56f28c;
+        animation-delay: 0s;
+      }
+      .mission-text .mission-text-2::before {
+        background: #36d4f2;
+        animation-delay: 5s;
+      }
+      .mission-text .mission-text-3::before {
+        background: #e945c1;
+        animation-delay: 10s;
+      }
+
+      .mission-image {
+        width: fit-content;
+
+        .img-2,
+        .img-3 {
+          visibility: hidden;
         }
 
-        .img-1 {
+        .img-1 img,
+        .img-2 img,
+        .img-3 img {
+          position: absolute;
+          width: 50%;
           height: auto;
-          width: 90%;
           transform: rotate(-6deg);
           max-width: 577px;
         }
 
-        &::before {
+        .img-1::before,
+        .img-2::before,
+        .img-3::before {
           position: absolute;
           content: "";
-          background: transparent
-            linear-gradient(
-              180deg,
-              var(--content-mission-second-gradient-color) 0%,
-              var(--content-mission-tag-color) 100%
-            )
-            0% 0%;
-          width: 30%;
-          height: 58%;
+          width: 20%;
+          height: 50%;
           transform: translate(-24px);
         }
 
-        &::after {
+        .img-2::before {
+          background: transparent
+            linear-gradient(180deg, #259de8 0%, #36d4f2 100%) 0% 0%;
+        }
+        .img-1::before {
+          background: transparent
+            linear-gradient(180deg, #30d897 0%, #56f28c 100%) 0% 0%;
+        }
+        .img-3::before {
+          background: transparent
+            linear-gradient(180deg, #f918a1 0%, #e945c1 100%) 0% 0%;
+        }
+
+        .img-1::after,
+        .img-2::after,
+        .img-3::after {
           position: absolute;
           content: "";
           display: block;
-          background: var(--content-mission-image-icon) no-repeat;
-          height: 35%;
+          height: 25%;
           width: 10%;
           margin-top: -40px;
         }
+
+        .img-1::after {
+          background: url("../images/home/content/mission/icon-arrow.svg") no-repeat;
+        }
+        .img-2::after {
+          background: url("../images/home/content/mission/code.svg") no-repeat;
+        }
+        .img-3::after {
+          background: url("../images/home/content/mission/compas.svg") no-repeat;
+        }
+      }
+
+      @keyframes show {
+        0% {
+          opacity: 0;
+          visibility: hidden;
+        }
+        5% {
+          opacity: 1;
+          visibility: visible;
+        }
+        33% {
+          opacity: 1;
+          visibility: visible;
+        }
+        38% {
+          opacity: 0;
+          visibility: hidden;
+        }
+        100% {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+      @keyframes slider {
+        0% {
+          transform: translateX(100%);
+        }
+        5% {
+          transform: translateX(0%);
+          transform: rotate(-6deg);
+        }
+        33% {
+          transform: translateX(0%);
+          transform: rotate(-6deg);
+        }
+        38% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      .mission-image div {
+        animation: show 15s ease infinite;
+      }
+
+      .mission-image div.img-1 {
+        animation-delay: 0s;
+      }
+      .mission-image div.img-2 {
+        animation-delay: 5s;
+      }
+      .mission-image div.img-3 {
+        animation-delay: 10s;
+      }
+
+      .mission-image div img {
+        animation: slider 15s ease infinite;
+      }
+
+      .mission-image div.img-1 img {
+        animation-delay: 0s;
+      }
+      .mission-image div.img-2 img {
+        animation-delay: 5s;
+      }
+      .mission-image div.img-3 img {
+        animation-delay: 10s;
       }
     }
   }
@@ -362,7 +537,7 @@ body {
 
       .mission-content {
         .mission-text {
-          width: 800px;
+          width: 68%;
         }
       }
     }
@@ -406,20 +581,22 @@ body {
     .mission {
       .mission-content {
         .mission-image {
-          &::before {
-            width: 40%;
-            height: 55%;
-          }
-
-          &::after {
-            display: block;
-            height: 20%;
-            width: 33%;
+          .img-1,
+          .img-2,
+          .img-3 {
+            &::before {
+              width: 25%;
+              height: 30%;
+            }
+            &::after {
+              display: block;
+              width: 12%;
+            }
           }
         }
 
         .mission-text {
-          width: 70%;
+          width: 45%;
         }
       }
     }
@@ -525,17 +702,22 @@ body {
         }
 
         .mission-image {
-          margin-top: 20px;
+          .img-1,
+          .img-2,
+          .img-3 {
+            img {
+              width: 80%;
+            }
+            &::before {
+              transform: translate(-20px);
+              width: 38%;
+              height: 20%;
+            }
 
-          &::before {
-            transform: translate(-14px);
-            width: 40%;
-            height: 25%;
-          }
-
-          &::after {
-            height: 15%;
-            width: 25%;
+            &::after {
+              height: 30%;
+              width: 22%;
+            }
           }
         }
       }
