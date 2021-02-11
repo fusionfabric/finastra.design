@@ -139,7 +139,6 @@ body {
   --content-mission-title-font-size: clamp(1.5rem, 2.2vw, 2.2rem);
   --content-mission-text-title-font-size: clamp(1.2rem, 1.7vw, 1.7rem);
   --content-mission-text-content-font-size: clamp(1rem, 1.5vw, 1.5rem);
-  --content-mission-tag-width: 20%;
   position: relative;
 
   .introduction {
@@ -329,14 +328,17 @@ body {
 
         .mission-text-content-1 {
           visibility: hidden;
+          height: 0;
           animation-delay: 0s;
         }
         .mission-text-content-2 {
           visibility: hidden;
+          height: 0;
           animation-delay: 5s;
         }
         .mission-text-content-3 {
           visibility: hidden;
+          height: 0;
           animation-delay: 10s;
         }
 
@@ -370,7 +372,6 @@ body {
       }
 
       .mission-text div::before {
-        float: left;
         width: 12%;
         animation: tag 15s ease infinite;
       }
@@ -389,14 +390,9 @@ body {
       }
 
       .mission-image {
-        width: fit-content;
-
         .img-2,
         .img-3 {
           visibility: hidden;
-        }
-        .img-1 .img-1-icon {
-          width: 40%;
         }
 
         .img-1 img,
@@ -406,7 +402,6 @@ body {
           width: 50%;
           height: auto;
           transform: rotate(-6deg);
-          max-width: 577px;
         }
 
         .img-1::before,
