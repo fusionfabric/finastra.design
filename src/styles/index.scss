@@ -3,6 +3,8 @@ body {
   .wrapper {
     position: relative;
     overflow-x: hidden;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -535,7 +537,6 @@ body {
 
   .content {
     .mission {
-      padding-left: 32px;
       .mission-title {
         p {
           padding-left: 32px;
@@ -590,7 +591,9 @@ body {
 
     .mission {
       .mission-content {
+        width: 73vw;
         .mission-image {
+          width: 30%;
           .img-1,
           .img-2,
           .img-3 {
@@ -601,12 +604,13 @@ body {
             &::after {
               display: block;
               width: 12%;
+              bottom: 76px
             }
           }
         }
 
         .mission-text {
-          width: 45%;
+          width: 60%;
         }
       }
     }
@@ -700,6 +704,7 @@ body {
       .mission-content {
         flex-direction: column;
         .mission-text {
+          width:60%;
           &::before {
             width: 18%;
           }
