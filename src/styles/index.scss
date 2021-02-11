@@ -480,6 +480,9 @@ body {
         }
         10% {
           transform: translateX(0%);
+          transform: rotate(-10deg);
+        }
+        13% {
           transform: rotate(-6deg);
         }
         33% {
@@ -704,7 +707,6 @@ body {
       .mission-content {
         flex-direction: column;
         .mission-text {
-          width:60%;
           &::before {
             width: 18%;
           }
@@ -717,6 +719,7 @@ body {
         }
 
         .mission-image {
+          padding-top: 32px;
           .img-1,
           .img-2,
           .img-3 {
@@ -726,7 +729,7 @@ body {
             &::before {
               transform: translate(-20px);
               width: 45%;
-              height: 40%;
+              height: 33%;
             }
 
             &::after {
