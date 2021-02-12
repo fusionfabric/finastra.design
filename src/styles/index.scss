@@ -526,6 +526,69 @@ body {
       }
     }
   }
+
+  .our-team {
+    display: none;
+    background-color: black;
+    height: 500px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 53em;
+    z-index: -1;
+
+    .team-title {
+      display: flex;
+      margin-top: 72px;
+      margin-left: 72px;
+
+      .title-border {
+        margin-left: 25px;
+        .title-text {
+          color: #ffffff;
+          font: normal normal bold 43px/31px FuturaEF-Bold;
+          font-size: var(--content-mission-title-font-size);
+          padding-top: 14px;
+          padding-bottom: 14px;
+        }
+
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          font-size: 30em;
+          padding: var(--content-intro-border-padding);
+          background-size: var(--content-intro-border-background-size);
+          background-repeat: no-repeat;
+          background-image: var(--content-intro-border-background-img);
+          transform: rotate(90deg);
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        top: 12%;
+        left: 580px;
+        height: 18%;
+        font-size: 0.2em;
+        padding: var(--content-intro-border-padding);
+        background-size: var(--content-intro-border-background-size);
+        background-repeat: no-repeat;
+        background-image: var(--content-intro-border-background-img);
+      }
+}
+
+    .team-sub-title {
+      margin-left: 170px;
+      margin-top: 32px;
+      width: 70%;
+      color: #ffffff;
+      font: normal normal 300 24px/31px Roboto;
+      font-size: clamp(1.2rem, 1.7vw, 1.7rem);
+    }
+  }
 }
 
 /* Desktop styles */
@@ -607,13 +670,27 @@ body {
             &::after {
               display: block;
               width: 12%;
-              bottom: 76px
+              bottom: 76px;
             }
           }
         }
 
         .mission-text {
           width: 60%;
+        }
+      }
+    }
+    .our-team {
+      .team-title {
+        .title-border {
+          &::before,
+          &::after {
+            font-size: 20em;
+          }
+        }
+
+        &::after {
+          left: 460px;
         }
       }
     }
@@ -740,6 +817,33 @@ body {
             }
           }
         }
+      }
+    }
+
+    .our-team {
+      top: 68em;
+      .team-title {
+        margin-left: 10px;
+
+        .team-title {
+          &::before,
+          &::after {
+            font-size: 22em;
+          }
+        }
+
+        img {
+          height: 58px;
+          width: 58px;
+        }
+
+        &::after {
+          left: 365px;
+        }
+      }
+      .team-sub-title {
+        margin-left: 40px;
+        width: 80%;
       }
     }
   }
