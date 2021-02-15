@@ -824,11 +824,10 @@ body {
       top: 68em;
       .team-title {
         margin-left: 10px;
-
-        .team-title {
+        .title-border {
           &::before,
           &::after {
-            font-size: 22em;
+            font-size: 20em;
           }
         }
 
