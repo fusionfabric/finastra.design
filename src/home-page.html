@@ -1,115 +1,244 @@
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>
-    <%= htmlWebpackPlugin.options.title %>
-  </title>
-</head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="logo">Finastra.design</div>
 
-<body>
-  <div class="wrapper">
-    <div class="header">
-      <div class="logo">Finastra.design</div>
+        <div class="team-images">
+          <img class="img2" src="./images/home/header/img1.png" />
+          <img class="img1" src="./images/home/header/img2.png" />
+          <img class="img3" src="./images/home/header/img3.png" />
+          <img class="crop-mark" src="./images/home/header/crop.svg" />
+        </div>
 
-      <div class="team-images">
-        <img class="img2" src="./images/home/header/img1.png" />
-        <img class="img1" src="./images/home/header/img2.png" />
-        <img class="img3" src="./images/home/header/img3.png" />
-        <img class="crop-mark" src="./images/home/header/crop.svg" />
+        <div class="title">
+          <div class="title-line">
+            <span>Let's</span>
+            <div class="title-animation">
+              <span class="title-emphasis">design</span>
+            </div>
+          </div>
+
+          <span class="title-line"
+            >the future
+            <span class="desktop">of finance</span>
+          </span>
+
+          <span class="mobile title-line">of finance</span>
+        </div>
       </div>
 
-      <div class="title">
-        <div class="title-line">
-          <span>Let's</span>
-          <div class="title-animation">
-            <span class="title-emphasis">design</span>
+      <div class="content">
+        <div class="introduction">
+          <img src="./images/home/content/introduction/icon-folder.png" />
+          <div class="text-border">
+            <div class="intro-text">
+              <span>We are looking for</span>
+              <span class="focus">highly talented</span>
+              and <span class="focus">experienced</span>
+              <span
+                >developers to be part of a new interdisciplinary and
+                international Design team who want</span
+              >
+              <span class="focus">to rock the market</span>
+            </div>
           </div>
         </div>
 
-        <span class="title-line">the future
-          <span class="desktop">of finance</span>
-        </span>
+        <div class="mission">
+          <div class="mission-title">
+            <p>OUR MISSION</p>
+          </div>
 
-        <span class="mobile title-line">of finance</span>
+          <div class="mission-content">
+            <div class="mission-text">
+              <div class="mission-text-1">
+                <span class="mission-text-title-1">Stay inspired</span>
+                <span class="mission-text-content-1"
+                  >Work and grow within a multi-disciplinary and talented team
+                  across the globe
+                </span>
+              </div>
+
+              <div class="mission-text-2">
+                <span class="mission-text-title-2">Make an impact</span>
+                <span class="mission-text-content-2"
+                  >Design and build plateforms and financial applications at
+                  scale that people love
+                </span>
+              </div>
+
+              <div class="mission-text-3">
+                <span class="mission-text-title-3">Our north star</span>
+                <span class="mission-text-content-3"
+                  >Democratize the creation of financial applications for
+                  everyone with intuitive tools and Open APIs
+                </span>
+              </div>
+            </div>
+
+            <div class="mission-image">
+              <div class="img-3">
+                <img src="./images/home/content/mission/img3.png" />
+              </div>
+              <div class="img-2">
+                <img src="./images/home/content/mission/img2.png" />
+              </div>
+              <div class="img-1">
+                <img src="./images/home/content/mission/img1.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="our-team">
+          <div class="team-title">
+            <img src="./images/home/content/team/people-icon.png" />
+            <div class="title-border">
+              <div class="title-text">
+                <span> OUR TALENTED TEAM</span>
+              </div>
+            </div>
+          </div>
+          <div class="team-sub-title">
+            Our team is based on the fourth corners of the planet, discover
+            them.<br />
+            We are several talents from designing to prototyping, to coding …
+          </div>
+
+          <div class="team-presentation">
+            <div class="container">
+              <div class="carousel">
+                <div class="item">
+                  <div class="person-photo">
+                    <img class="first-photo" src="./images/home/content/team/Xinyi/xinyi-1.jpg" />
+                    <img class="second-photo" src="./images/home/content/team/Xinyi/xinyi-2.jpg" />
+                  </div>
+
+                  <div class="person-details">
+                    <div class="person-title">
+                      <div class="description">
+                        <span class="name">Xinyi</span><br />
+                        <span class="job">UI/UX developer</span>
+                      </div>
+                      <div class="localisation">
+                        <span>Paris</span>
+                        <img src="./images/home/content/team/pin.svg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="person-photo">
+                    <img class="first-photo" src="./images/home/content/team/Thomas/toto-1.jpg" />
+                    <img lass="second-photo" src="./images/home/content/team/Thomas/toto-2.jpg" />
+                  </div>
+
+                  <div class="person-details">
+                    <div class="person-title">
+                      <div class="description">
+                        <span class="name">Thomas</span><br />
+                        <span class="job">UI/UX developer</span>
+                      </div>
+                      <div class="localisation">
+                        <span>Paris</span>
+                        <img src="./images/home/content/team/pin.svg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="person-photo">
+                    <img
+                      src="./images/home/content/team/Juliette/juliette-1.jpg"
+                    />
+                  </div>
+
+                  <div class="person-details">
+                    <div class="person-title">
+                      <div class="description">
+                        <span class="name">Juliette</span><br />
+                        <span class="job">UI/UX Designer</span>
+                      </div>
+                      <div class="localisation">
+                        <span>Paris</span>
+                        <img src="./images/home/content/team/pin.svg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="person-photo">
+                    <img class="first-photo" src="./images/home/content/team/Julien/juju1.png" />
+                    <img class="second-photo" src="./images/home/content/team/Julien/juju2.png"/>
+                  </div>
+
+                  <div class="person-details">
+                    <div class="person-title">
+                      <div class="description">
+                        <span class="name">Julien</span><br />
+                        <span class="job">Art Director</span>
+                      </div>
+                      <div class="localisation">
+                        <span>Paris</span>
+                        <img src="./images/home/content/team/pin.svg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="person-photo">
+                    <img class="first-photo" src="./images/home/content/team/Raya/raya-1.jpg" />
+                    <img  class="second-photo" src="./images/home/content/team/Raya/raya-1.jpg" />
+                  </div>
+
+                  <div class="person-details">
+                    <div class="person-title">
+                      <div class="description">
+                        <span class="name">Raya</span><br />
+                        <span class="job">Senior manager</span>
+                      </div>
+                      <div class="localisation">
+                        <span>Paris</span>
+                        <img src="./images/home/content/team/pin.svg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="person-photo">
+                    <img class="first-photo" src="./images/home/content/team/Dorsaf/DORSAF-1.jpg" />
+                    <img class="second-photo" src="./images/home/content/team/Dorsaf/DORSAF-2.jpg" />
+                  </div>
+
+                  <div class="person-details">
+                    <div class="person-title">
+                      <div class="description">
+                        <span class="name">Dorsaf</span><br />
+                        <span class="job">Software engineer</span>
+                      </div>
+                      <div class="localisation">
+                        <span>Paris</span>
+                        <img src="./images/home/content/team/pin.svg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="content">
-      <div class="introduction">
-        <img src="./images/home/content/introduction/icon-folder.png" />
-        <div class="text-border">
-          <div class="intro-text">
-            <span>We are looking for</span>
-            <span class="focus">highly talented</span>
-            and <span class="focus">experienced</span>
-            <span>developers to be part of a new interdisciplinary and
-              international Design team who want</span>
-            <span class="focus">to rock the market</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="mission">
-        <div class="mission-title">
-          <p>OUR MISSION</p>
-        </div>
-
-        <div class="mission-content">
-          <div class="mission-text">
-            <div class="mission-text-1">
-              <span class="mission-text-title-1">Stay inspired</span>
-              <span class="mission-text-content-1">Work and grow within a multi-disciplinary and talented team
-                across the globe
-              </span>
-            </div>
-
-            <div class="mission-text-2">
-              <span class="mission-text-title-2">Make an impact</span>
-              <span class="mission-text-content-2">Design and build plateforms and financial applications at scale
-                that people love
-              </span>
-            </div>
-
-            <div class="mission-text-3">
-              <span class="mission-text-title-3">Our north star</span>
-              <span class="mission-text-content-3">Democratize the creation of financial applications for everyone
-                with intuitive tools and Open APIs
-              </span>
-            </div>
-          </div>
-
-          <div class="mission-image">
-            <div class="img-3">
-              <img src="./images/home/content/mission/img3.png" />
-            </div>
-            <div class="img-2">
-              <img src="./images/home/content/mission/img2.png" />
-            </div>
-            <div class="img-1">
-              <img src="./images/home/content/mission/img1.png" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="our-team">
-        <div class="team-title">
-          <img src="./images/home/content/team/people-icon.png" />
-          <div class="title-border">
-            <div class="title-text">
-              <span> OUR TALENTED TEAM</span>
-            </div>
-          </div>
-        </div>
-        <div class="team-sub-title">
-          Our team is based on the fourth corners of the planet, discover
-          them.<br />
-          We are several talents from designing to prototyping, to coding …
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
