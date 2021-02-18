@@ -442,7 +442,8 @@ body {
         }
 
         .img-1::after {
-          background: url("../images/home/content/mission/icon-arrow.svg") no-repeat;
+          background: url("../images/home/content/mission/icon-arrow.svg")
+            no-repeat;
         }
         .img-2::after {
           background: url("../images/home/content/mission/code.svg") no-repeat;
@@ -476,24 +477,27 @@ body {
       }
       @keyframes slider {
         0% {
-          transform: translateX(100%);
+          transform: translate(100%, 30%);
         }
         10% {
-          transform: translateX(0%);
-          transform: rotate(-10deg);
+          transform: translate(30%, 30%);
+          transform: rotate(-6deg);
         }
-        13% {
+        15% {
+          transform: translate(0%,0%);
           transform: rotate(-6deg);
         }
         33% {
-          transform: translateX(0%);
+          transform: translate(0%,0%);
           transform: rotate(-6deg);
         }
         38% {
-          transform: translateX(100%);
+          transform: translate(100%,0%);
+          transform: rotate(-6deg);
         }
         100% {
           transform: translateX(100%);
+          transform: rotate(-6deg);
         }
       }
 
@@ -607,7 +611,7 @@ body {
             &::after {
               display: block;
               width: 12%;
-              bottom: 76px
+              bottom: 76px;
             }
           }
         }
