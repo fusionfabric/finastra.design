@@ -124,6 +124,7 @@ body {
 }
 
 .content {
+  display: block;
   --content-intro-font-size: clamp(1rem, 2vw, 2rem);
   --content-intro-text-padding: 10px;
   --content-intro-border-font-size: 3em;
@@ -442,7 +443,8 @@ body {
         }
 
         .img-1::after {
-          background: url("../images/home/content/mission/icon-arrow.svg") no-repeat;
+          background: url("../images/home/content/mission/icon-arrow.svg")
+            no-repeat;
         }
         .img-2::after {
           background: url("../images/home/content/mission/code.svg") no-repeat;
@@ -528,7 +530,6 @@ body {
   }
 
   .our-team {
-    display: none;
     background: url("../images/home/content/team/bg-black.svg");
     background-repeat: repeat-y;
     background-size: 100%;
@@ -537,7 +538,6 @@ body {
     display: block;
     position: absolute;
     top: 53em;
-    z-index: -1;
 
     .team-title {
       display: flex;
@@ -580,7 +580,7 @@ body {
         background-repeat: no-repeat;
         background-image: var(--content-intro-border-background-img);
       }
-}
+    }
 
     .team-sub-title {
       margin-left: 170px;
@@ -592,7 +592,8 @@ body {
     }
 
     .team-presentation {
-      padding: 100px 72px 72px 72px;
+      padding-top: 70px;
+      padding-bottom: 70px;
       display: block;
 
       .container {
@@ -605,28 +606,28 @@ body {
         display: block;
         width: 100%;
         overflow-x: scroll;
-        padding: 10px;
         margin: 0;
+        padding-top: 60px;
+        padding-left: 100px;
         white-space: nowrap;
-        border-top: 2px solid rgba(0, 0, 0, 0.1);
-        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
       }
 
       .item {
         display: inline-block;
         width: 300px;
-        margin: 0 10px;
+        padding-left: 32px;
         background: rgba(0, 0, 0, 0.05) no-repeat center center;
         background-size: cover;
         position: relative;
+        transition: 0.3s;
 
         .person-photo {
-          .first-photo {
+          .second-photo {
             left: 0;
-            position: absolute;
+            position: fixed;
           }
 
-          &::after {
+          /* &::after {
             position: absolute;
             content: "";
             display: block;
@@ -635,13 +636,13 @@ body {
             height: 100px;
             bottom: 23%;
             right: 6%;
-          }
+          }*/
         }
 
         .person-details {
           margin-top: 32px;
-          font: 24px/31px Roboto;
           color: white;
+          opacity: 0.7;
           padding-top: 32px;
           padding-bottom: 32px;
           background-position: 0 0, 0 0, 100% 0, 0 100%;
@@ -692,13 +693,18 @@ body {
             display: flex;
             justify-content: space-evenly;
             .description {
+              line-height: 9px;
               color: white;
 
               .name {
+                display: block;
                 font: bold 28px/31px FuturaEF-Bold;
+                font-size: clamp(1.2rem, 1.7vw, 1.7rem);
               }
               .job {
+                display: block;
                 font: 20px/31px Futura;
+                font-size: clamp(1rem, 1.5vw, 1.5rem);
               }
             }
 
@@ -711,6 +717,7 @@ body {
               span {
                 align-self: center;
                 font: 15px/31px Futura;
+                font-size: clamp(0.8rem, 1.3vw, 1.3rem);
               }
             }
           }
@@ -719,6 +726,29 @@ body {
         img {
           width: 100%;
         }
+      }
+
+      .item:hover {
+        padding-left: 62px;
+        padding-right: 62px;
+
+        .person-photo {
+          transition: 0.3s;
+          transform: rotate(5deg) scale(1.1) translateX(-5%);
+          padding-bottom: 32px;
+          &::after {
+            bottom: -10%;
+          }
+        }
+
+        .person-details {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+      }
+
+      .last-item {
+        margin-right: 150px;
       }
     }
   }
@@ -824,6 +854,29 @@ body {
 
         &::after {
           left: 460px;
+        }
+      }
+      .team-presentation {
+        .item {
+          width: 280px;
+        }
+        
+        .item:active {
+          padding-left: 62px;
+          padding-right: 62px;
+          .person-photo {
+            transition: 0.3s;
+            transform: rotate(5deg) scale(1.1) translateX(-5%);
+            padding-bottom: 32px;
+            &::after {
+              bottom: -10%;
+            }
+          }
+
+          .person-details {
+            opacity: 1;
+            transform: scale(1.1);
+          }
         }
       }
     }
@@ -976,6 +1029,42 @@ body {
       .team-sub-title {
         margin-left: 40px;
         width: 80%;
+      }
+
+      .team-presentation {
+        .carousel {
+          padding-left: 30px;
+        }
+
+        .item {
+          width: 200px;
+          .person-details {
+            padding-top: 16px;
+            padding-bottom: 16px;
+          }
+        }
+
+        .item:active {
+          padding-left: 62px;
+          padding-right: 62px;
+
+          .person-photo {
+            transition: 0.5s;
+            transform: rotate(5deg) scale(1.1) translateX(-5%);
+            padding-bottom: 32px;
+            &::after {
+              bottom: -10%;
+            }
+          }
+          .person-details {
+            opacity: 1;
+            transform: scale(1.1);
+          }
+        }
+
+        .last-item {
+          margin-right: 50px;
+        }
       }
     }
   }
