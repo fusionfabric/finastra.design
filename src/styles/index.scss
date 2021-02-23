@@ -613,6 +613,7 @@ body {
         padding-top: 60px;
         padding-left: 100px;
         white-space: nowrap;
+        height: 600px;
       }
 
       .item {
@@ -640,15 +641,18 @@ body {
 
         .person-quote {
           position: absolute;
-          display: none;
-          font: 20px/31px Roboto;
-          font-size: clamp(1rem, 1.1vw, 1.1rem);
           background-color: #ffed15;
+          display: none;
           width: 80%;
           height: 100px;
+          bottom: 168px;
+          padding: 10px;
+          font: 20px/31px Roboto;
+          font-size: clamp(1rem, 1.1vw, 1.1rem);
+          overflow: hidden;
+          text-overflow: ellipsis;
           text-align: center;
           line-height: 100px;
-          bottom: 168px;
         }
 
         .person-details {
@@ -770,6 +774,17 @@ body {
 
       .last-item {
         margin-right: 150px;
+      }
+
+      .test {
+        font: 20px/31px Roboto;
+        font-size: clamp(1rem, 1.1vw, 1.1rem);
+        background-color: #ffed15;
+        width: 30%;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        bottom: 168px;
       }
     }
   }
@@ -1056,6 +1071,7 @@ body {
       .team-presentation {
         .carousel {
           padding-left: 30px;
+          height: 450px;
         }
 
         .item {
@@ -1070,6 +1086,12 @@ body {
         .item:hover {
           .person-icon {
             top: 230px;
+          }
+
+          .person-quote {
+            width: 60%;
+            height: 80px;
+            line-height: 80px;
           }
         }
 
