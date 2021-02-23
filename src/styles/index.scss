@@ -485,15 +485,15 @@ body {
           transform: rotate(-6deg);
         }
         15% {
-          transform: translate(0%,0%);
+          transform: translate(0%, 0%);
           transform: rotate(-6deg);
         }
         33% {
-          transform: translate(0%,0%);
+          transform: translate(0%, 0%);
           transform: rotate(-6deg);
         }
         38% {
-          transform: translate(100%,0%);
+          transform: translate(100%, 0%);
           transform: rotate(-6deg);
         }
         100% {
@@ -629,17 +629,26 @@ body {
             left: 0;
             position: fixed;
           }
+        }
 
-          /* &::after {
-            position: absolute;
-            content: "";
-            display: block;
-            background: url("../images/home/content/team/cat.svg") no-repeat;
-            width: 30%;
-            height: 100px;
-            bottom: 23%;
-            right: 6%;
-          }*/
+        .person-icon {
+          position: absolute;
+          bottom: 26%;
+          width: 30%;
+          right: 7%;
+        }
+
+        .person-quote {
+          position: absolute;
+          display: none;
+          font: 20px/31px Roboto;
+          font-size: clamp(1rem, 1.1vw, 1.1rem);
+          background-color: #ffed15;
+          width: 80%;
+          height: 100px;
+          text-align: center;
+          line-height: 100px;
+          bottom: 168px;
         }
 
         .person-details {
@@ -732,16 +741,25 @@ body {
       }
 
       .item:hover {
+        transition: 0.3s;
         padding-left: 62px;
         padding-right: 62px;
 
         .person-photo {
-          transition: 0.3s;
           transform: rotate(5deg) scale(1.1) translateX(-5%);
           padding-bottom: 32px;
           &::after {
             bottom: -10%;
           }
+        }
+
+        .person-quote {
+          display: block;
+        }
+
+        .person-icon {
+          width: 20%;
+          left: 0;
         }
 
         .person-details {
@@ -863,7 +881,7 @@ body {
         .item {
           width: 280px;
         }
-        
+
         .item:active {
           padding-left: 62px;
           padding-right: 62px;
@@ -1027,6 +1045,7 @@ body {
 
         &::after {
           left: 365px;
+          top: 6%;
         }
       }
       .team-sub-title {
@@ -1041,27 +1060,16 @@ body {
 
         .item {
           width: 200px;
+
           .person-details {
             padding-top: 16px;
             padding-bottom: 16px;
           }
         }
 
-        .item:active {
-          padding-left: 62px;
-          padding-right: 62px;
-
-          .person-photo {
-            transition: 0.5s;
-            transform: rotate(5deg) scale(1.1) translateX(-5%);
-            padding-bottom: 32px;
-            &::after {
-              bottom: -10%;
-            }
-          }
-          .person-details {
-            opacity: 1;
-            transform: scale(1.1);
+        .item:hover {
+          .person-icon {
+            top: 230px;
           }
         }
 
