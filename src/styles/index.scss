@@ -211,7 +211,7 @@ body {
       p {
         position: relative;
         bottom: 85px;
-        font: 43px FuturaEF-Bold;
+        font: 700 43px Futura;
         font-size: var(--content-title-font-size);
         color: #414141;
         padding-left: 8px;
@@ -549,7 +549,7 @@ body {
 
         .title-text {
           color: #ffffff;
-          font: 43px/31px FuturaEF-Bold;
+          font: 700 43px/31px Futura;
           font-size: var(--content-title-font-size);
           padding: 14px 0px 14px 0px;
         }
@@ -672,6 +672,10 @@ body {
           line-height: 100px;
         }
 
+        .quote-bg{
+          background-color: #36d4f2;
+        }
+
         .person-details {
           margin-top: 32px;
           color: white;
@@ -730,7 +734,7 @@ body {
 
               .name {
                 display: block;
-                font: 28px/31px FuturaEF-Bold;
+                font: 700 28px/31px Futura;
                 font-size: clamp(1.2rem, 1.7vw, 1.7rem);
               }
               .job {
@@ -1050,7 +1054,7 @@ body {
         }
 
         &::after {
-          left: 365px;
+          left: 385px;
           top: 5%;
         }
       }
