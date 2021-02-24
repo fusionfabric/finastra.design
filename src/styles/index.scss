@@ -128,9 +128,10 @@ body {
   --content-intro-font-size: clamp(1rem, 2vw, 2rem);
   --content-intro-text-padding: 10px;
   --content-intro-border-font-size: 3em;
-  --content-intro-border-padding: 0.5em;
-  --content-intro-border-background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
-  --content-intro-border-background-img: repeating-linear-gradient(
+
+  --content-border-padding: 0.5em;
+  --content-border-background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  --content-border-background-img: repeating-linear-gradient(
     0deg,
     var(--clr-border),
     var(--clr-border) 10px,
@@ -139,7 +140,7 @@ body {
   );
   --clr-border: rgb(138, 135, 135);
 
-  --content-mission-title-font-size: clamp(1.5rem, 2.2vw, 2.2rem);
+  --content-title-font-size: clamp(1.5rem, 2.2vw, 2.2rem);
   --content-mission-text-title-font-size: clamp(1.2rem, 1.7vw, 1.7rem);
   --content-mission-text-content-font-size: clamp(1rem, 1.5vw, 1.5rem);
   position: relative;
@@ -173,10 +174,10 @@ body {
         content: "";
         left: -4%;
         font-size: var(--content-intro-border-font-size);
-        padding: var(--content-intro-border-padding);
-        background-size: var(--content-intro-border-background-size);
+        padding: var(--content-border-padding);
+        background-size: var(--content-border-background-size);
         background-repeat: no-repeat;
-        background-image: var(--content-intro-border-background-img);
+        background-image: var(--content-border-background-img);
         transform: rotate(90deg);
       }
     }
@@ -189,10 +190,10 @@ body {
       left: 14%;
       height: 60%;
       font-size: var(--content-intro-border-font-size);
-      padding: var(--content-intro-border-padding);
-      background-size: var(--content-intro-border-background-size);
+      padding: var(--content-border-padding);
+      background-size: var(--content-border-background-size);
       background-repeat: no-repeat;
-      background-image: var(--content-intro-border-background-img);
+      background-image: var(--content-border-background-img);
     }
   }
 
@@ -211,7 +212,7 @@ body {
         position: relative;
         bottom: 85px;
         font: 43px FuturaEF-Bold;
-        font-size: var(--content-mission-title-font-size);
+        font-size: var(--content-title-font-size);
         color: #414141;
         padding-left: 8px;
         margin-top: 48px;
@@ -233,9 +234,9 @@ body {
       &::after {
         position: absolute;
         content: "";
-        background-size: var(--content-intro-border-background-size);
+        background-size: var(--content-border-background-size);
         background-repeat: no-repeat;
-        background-image: var(--content-intro-border-background-img);
+        background-image: var(--content-border-background-img);
         right: 100%;
         top: 46%;
         height: 80%;
@@ -534,9 +535,6 @@ body {
 
   .our-team {
     background: url("../images/home/content/team/bg-black.svg");
-    background-repeat: repeat-y;
-    background-size: 100%;
-    height: auto;
     width: 100%;
     display: block;
     position: absolute;
@@ -544,17 +542,16 @@ body {
 
     .team-title {
       display: flex;
-      margin-top: 72px;
-      margin-left: 72px;
+      margin: 72px 0px 0px 72px;
 
       .title-border {
         margin-left: 25px;
+
         .title-text {
           color: #ffffff;
-          font: normal normal bold 43px/31px FuturaEF-Bold;
-          font-size: var(--content-mission-title-font-size);
-          padding-top: 14px;
-          padding-bottom: 14px;
+          font: 43px/31px FuturaEF-Bold;
+          font-size: var(--content-title-font-size);
+          padding: 14px 0px 14px 0px;
         }
 
         &::before,
@@ -562,10 +559,10 @@ body {
           position: absolute;
           content: "";
           font-size: 30em;
-          padding: var(--content-intro-border-padding);
-          background-size: var(--content-intro-border-background-size);
+          padding: var(--content-border-padding);
+          background-size: var(--content-border-background-size);
           background-repeat: no-repeat;
-          background-image: var(--content-intro-border-background-img);
+          background-image: var(--content-border-background-img);
           transform: rotate(90deg);
         }
       }
@@ -574,14 +571,14 @@ body {
         content: "";
         position: absolute;
         bottom: 0;
-        top: 5%;
+        top: 4%;
         left: 580px;
-        height: 10%;
-        font-size: 0.2em;
-        padding: var(--content-intro-border-padding);
-        background-size: var(--content-intro-border-background-size);
+        height: 9%;
+        font-size: 22px;
+        padding: var(--content-border-padding);
+        background-size: var(--content-border-background-size);
         background-repeat: no-repeat;
-        background-image: var(--content-intro-border-background-img);
+        background-image: var(--content-border-background-img);
       }
     }
 
@@ -590,13 +587,12 @@ body {
       margin-top: 32px;
       width: 70%;
       color: #ffffff;
-      font: normal normal 300 24px/31px Roboto;
+      font: 300 24px/31px Roboto;
       font-size: clamp(1.2rem, 1.7vw, 1.7rem);
     }
 
     .team-presentation {
-      padding-top: 70px;
-      padding-bottom: 70px;
+      padding: 70px 0px 70px 0px;
       display: block;
 
       .container {
@@ -634,34 +630,29 @@ body {
       .carousel {
         display: block;
         width: 100%;
-        overflow-x: scroll;
-        margin: 0;
-        padding-top: 60px;
-        padding-left: 100px;
-        white-space: nowrap;
         height: 600px;
+        overflow-x: scroll;
+        padding: 60px 0px 0px 100px;
+        white-space: nowrap;
       }
 
       .item {
+        position: relative;
         display: inline-block;
         width: 300px;
         padding-left: 32px;
-        background: rgba(0, 0, 0, 0.05) no-repeat center center;
-        background-size: cover;
-        position: relative;
-        transition: 0.3s;
 
         .person-photo {
           .second-photo {
-            left: 0;
             position: fixed;
+            left: 0;
           }
         }
 
         .person-icon {
           position: absolute;
-          bottom: 26%;
           width: 30%;
+          bottom: 26%;
           right: 7%;
         }
 
@@ -685,8 +676,7 @@ body {
           margin-top: 32px;
           color: white;
           opacity: 0.7;
-          padding-top: 32px;
-          padding-bottom: 32px;
+          padding: 32px 0px 32px 0px;
           background-position: 0 0, 0 0, 100% 0, 0 100%;
           background-size: 2px 100%, 100% 2px, 2px 100%, 100% 3px;
           background-repeat: no-repeat;
@@ -734,13 +724,13 @@ body {
           .person-title {
             display: flex;
             justify-content: space-evenly;
+            color: white;
             .description {
               line-height: 9px;
-              color: white;
 
               .name {
                 display: block;
-                font: bold 28px/31px FuturaEF-Bold;
+                font: 28px/31px FuturaEF-Bold;
                 font-size: clamp(1.2rem, 1.7vw, 1.7rem);
               }
               .job {
@@ -751,7 +741,6 @@ body {
             }
 
             .localisation {
-              color: white;
               display: flex;
               flex-direction: column-reverse;
               width: 32px;
@@ -770,10 +759,10 @@ body {
         }
       }
 
-      .item:hover {
+      .item:hover,
+      .item:active {
         transition: 0.3s;
-        padding-left: 62px;
-        padding-right: 62px;
+        padding: 0px 62px 0 62px;
 
         .person-photo {
           transform: rotate(5deg) scale(1.1) translateX(-5%);
@@ -800,17 +789,6 @@ body {
 
       .last-item {
         margin-right: 150px;
-      }
-
-      .test {
-        font: 20px/31px Roboto;
-        font-size: clamp(1rem, 1.1vw, 1.1rem);
-        background-color: #ffed15;
-        width: 30%;
-        height: 100px;
-        text-align: center;
-        line-height: 100px;
-        bottom: 168px;
       }
     }
   }
@@ -926,24 +904,6 @@ body {
 
         .item {
           width: 280px;
-        }
-
-        .item:active {
-          padding-left: 62px;
-          padding-right: 62px;
-          .person-photo {
-            transition: 0.3s;
-            transform: rotate(5deg) scale(1.1) translateX(-5%);
-            padding-bottom: 32px;
-            &::after {
-              bottom: -10%;
-            }
-          }
-
-          .person-details {
-            opacity: 1;
-            transform: scale(1.1);
-          }
         }
       }
     }
@@ -1091,7 +1051,7 @@ body {
 
         &::after {
           left: 365px;
-          top: 6%;
+          top: 5%;
         }
       }
       .team-sub-title {
@@ -1119,7 +1079,8 @@ body {
           }
         }
 
-        .item:hover {
+        .item:hover,
+        .item:active {
           .person-icon {
             top: 230px;
           }
