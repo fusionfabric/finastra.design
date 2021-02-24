@@ -630,10 +630,10 @@ body {
       .carousel {
         display: block;
         width: 100%;
-        height: 600px;
         overflow-x: scroll;
         padding: 60px 0px 0px 100px;
         white-space: nowrap;
+        padding-bottom: 32px;
       }
 
       .item {
@@ -735,12 +735,12 @@ body {
               .name {
                 display: block;
                 font: 700 28px/31px Futura;
-                font-size: clamp(1.2rem, 1.7vw, 1.7rem);
+                font-size: clamp(1.1rem, 1.5vw, 1.5rem);
               }
               .job {
                 display: block;
                 font: 20px/31px Futura;
-                font-size: clamp(1rem, 1.5vw, 1.5rem);
+                font-size: clamp(0.8rem, 1.1vw, 1.1rem);
               }
             }
 
@@ -752,7 +752,7 @@ body {
               span {
                 align-self: center;
                 font: 15px/31px Futura;
-                font-size: clamp(0.8rem, 1.3vw, 1.3rem);
+                font-size: clamp(0.7rem, 1vw, 1rem);
               }
             }
           }
@@ -908,6 +908,10 @@ body {
 
         .item {
           width: 280px;
+
+          .person-details {
+            padding: 16px 0px 16px 0;
+          }
         }
       }
     }
@@ -1071,7 +1075,6 @@ body {
 
         .carousel {
           padding-left: 30px;
-          height: 450px;
         }
 
         .item {
@@ -1080,6 +1083,14 @@ body {
           .person-details {
             padding-top: 16px;
             padding-bottom: 16px;
+
+            .person-title {
+              .localisation {
+                img {
+                  width:80%;
+                }
+              }
+            }
           }
         }
 
