@@ -4,6 +4,8 @@ import './styles/index.scss'
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 
+import 'regenerator-runtime/runtime'
+
 gsap.registerPlugin(TextPlugin);
 const middle = innerWidth / 2;
 
