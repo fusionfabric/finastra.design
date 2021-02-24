@@ -605,6 +605,32 @@ body {
         display: block;
         overflow: hidden;
       }
+
+      .scroll-left {
+        position: absolute;
+        background: url("../images/home/content/team/arrow.svg") no-repeat;
+        width: 50px;
+        height: 40px;
+        transform: rotate(180deg);
+        border: none;
+        outline: inherit;
+        right: 50px;
+        top: 26em;
+        z-index: 11;
+      }
+
+      .scroll-right {
+        position: absolute;
+        background: url("../images/home/content/team/arrow.svg") no-repeat;
+        width: 50px;
+        height: 40px;
+        border: none;
+        outline: inherit;
+        right: 0px;
+        top: 26em;
+        z-index: 11;
+      }
+
       .carousel {
         display: block;
         width: 100%;
@@ -893,6 +919,11 @@ body {
         }
       }
       .team-presentation {
+        .scroll-left,
+        .scroll-right {
+          display: none;
+        }
+
         .item {
           width: 280px;
         }
@@ -1069,6 +1100,11 @@ body {
       }
 
       .team-presentation {
+        .scroll-left,
+        .scroll-right {
+          display: none;
+        }
+
         .carousel {
           padding-left: 30px;
           height: 450px;
