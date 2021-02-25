@@ -672,7 +672,7 @@ body {
           line-height: 100px;
         }
 
-        .quote-bg{
+        .quote-bg {
           background-color: #36d4f2;
         }
 
@@ -796,6 +796,43 @@ body {
       }
     }
   }
+
+  .articles {
+    position: absolute;
+    top: 124em;
+    margin-left: 14%;
+    width: 100%;
+
+    .articles-title {
+      background: url("../images/home/content/mission/carrés.png") no-repeat;
+      background-size: 100% 45%;
+      position: absolute;
+      padding-right: 80px;
+
+      p {
+        position: relative;
+        bottom: 85px;
+        font: 700 43px Futura;
+        font-size: var(--content-title-font-size);
+        color: #414141;
+        padding-left: 8px;
+        margin-top: 48px;
+      }
+
+      &::before {
+        position: relative;
+        content: "";
+        display: inline-block;
+        background-image: url("../images/home/content/articles/pen.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 20%;
+        height: 60px;
+        right: 46px;
+        top: 16px;
+      }
+    }
+  }
 }
 
 /* Desktop styles */
@@ -912,6 +949,15 @@ body {
           .person-details {
             padding: 16px 0px 16px 0;
           }
+        }
+      }
+    }
+
+    .articles {
+      top: 120em;
+      .articles-title {
+        &::before {
+          right: 30px;
         }
       }
     }
@@ -1087,7 +1133,7 @@ body {
             .person-title {
               .localisation {
                 img {
-                  width:80%;
+                  width: 80%;
                 }
               }
             }
@@ -1109,6 +1155,16 @@ body {
 
         .last-item {
           margin-right: 50px;
+        }
+      }
+    }
+
+    .articles {
+      top: 133em;
+      .articles-title {
+        margin-top: 0;
+        &::before {
+          right: 27px;
         }
       }
     }
