@@ -61,3 +61,13 @@ function scroll(element,direction,speed,distance,step){
         }
     }, speed);
 }
+
+function redirectTo(url,index) {
+    document.getElementsByClassName("article-list")[0].children[index].addEventListener('click', event => {
+        window.open(url, '_blank');
+      });
+}
+
+redirectTo('https://design.fusionfabric.cloud/',0);
+redirectTo('https://developer.fusionfabric.cloud/',1);
+redirectTo('https://stackblitz.com/@ffdcbot',2);
