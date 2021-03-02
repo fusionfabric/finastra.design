@@ -944,6 +944,81 @@ body {
     }
   }
 }
+.footer {
+  position: relative;
+  background: url("../images/home/content/team/bg-black.svg");
+  width: 100%;
+  height: 700px;
+
+  .footer-title {
+    color: #34b9ca;
+    font: 700 44px/52px Futura;
+    font-size: clamp(1.5rem, 2.7vw, 2.7rem);
+    text-align: center;
+    padding-top: 132px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .contact {
+    color: white;
+    border: 0.1rem solid #ea41be;
+    font-size: clamp(1rem, 1.1vw, 1.1rem);
+    border-radius: 50px;
+    padding: 32px;
+    font: 35px/52px Futura;
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    span {
+      margin-right: 16px;
+    }
+  }
+
+  .footer-list {
+    color: white;
+    display: inline-block;
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: fit-content;
+
+    .footer-name {
+      font: 300 24px/46px Roboto;
+      font-size: clamp(1rem, 1.2vw, 1.2rem);
+      color: white;
+      text-align: center;
+    }
+
+    ul {
+      font: normal normal 300 18px/52px Roboto;
+      font-size: clamp(0.7rem, 1.2vw, 1.2rem);
+      list-style-type: none;
+      display: flex;
+
+      li {
+        margin: 0 15px 0 0;
+      }
+    }
+  }
+
+  .socials-icons {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding-right: 48px;
+
+    img {
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+}
 
 /* Desktop styles */
 @media (min-width: 1025px) {
@@ -1315,6 +1390,20 @@ body {
           }
         }
       }
+    }
+  }
+
+  .footer {
+    .footer-list {
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        li {
+          margin: 0 0px -15px 0;
+        }
+      }
+  
     }
   }
 }
