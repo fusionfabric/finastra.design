@@ -916,9 +916,19 @@ body {
             margin: 0px 0px 12px 8px;
           }
 
+          .chip:hover {
+            background-color: #ea41be;
+            color: white;
+          }
+
           .chip-color {
             color: #28a9ea;
             border-color: #28a9ea;
+          }
+
+          .chip-color:hover {
+            background-color: #28a9ea;
+            color: white;
           }
         }
 
