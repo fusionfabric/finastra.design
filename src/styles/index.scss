@@ -143,9 +143,9 @@ body {
   --content-title-font-size: clamp(1.5rem, 2.2vw, 2.2rem);
   --content-mission-text-title-font-size: clamp(1.2rem, 1.7vw, 1.7rem);
   --content-mission-text-content-font-size: clamp(1rem, 1.5vw, 1.5rem);
-  position: relative;
 
   .introduction {
+    position: relative;
     font: 300 24px/48px Roboto, roboto, Helvetica Neue, sans-serif;
     margin: 70px auto;
     width: 70%;
@@ -187,8 +187,8 @@ body {
       position: absolute;
       bottom: 0;
       top: 0;
-      left: 14%;
-      height: 60%;
+      left: -2%;
+      height: 70%;
       font-size: var(--content-intro-border-font-size);
       padding: var(--content-border-padding);
       background-size: var(--content-border-background-size);
@@ -198,15 +198,16 @@ body {
   }
 
   .mission {
-    position: absolute;
-    margin-left: 14%;
-    height: 500px;
+    height: 60%;
+    width: 100%;
+    padding-top: 72px;
 
     .mission-title {
       background: url("../images/home/content/mission/carrés.png") no-repeat;
       background-size: 100% 45%;
       position: absolute;
       padding-right: 80px;
+      margin-left: 14%;
 
       p {
         position: relative;
@@ -237,10 +238,11 @@ body {
         background-size: var(--content-border-background-size);
         background-repeat: no-repeat;
         background-image: var(--content-border-background-img);
-        right: 100%;
-        top: 46%;
-        height: 80%;
+        top: 47%;
+        height: 100%;
         font-size: 96px;
+        padding: 1em;
+        left: -191px;
         padding: 1em;
         transform: rotate(180deg);
       }
@@ -249,13 +251,17 @@ body {
     .mission-content {
       position: relative;
       display: flex;
-      top: 112px;
+      top: 20%;
+      left: 15%;
+
+      .mission-text {
+        width: 60%;
+      }
 
       .mission-text-1,
       .mission-text-2,
       .mission-text-3 {
         margin: 0 0 24px 24px;
-        width: 80%;
 
         .mission-text-title-1,
         .mission-text-title-2,
@@ -302,12 +308,12 @@ body {
             opacity: 0;
           }
           10% {
-            height: 100px;
+            height: 120px;
             visibility: visible;
             opacity: 1;
           }
           33% {
-            height: 100px;
+            height: 120px;
             visibility: visible;
             opacity: 1;
           }
@@ -352,31 +358,31 @@ body {
           border-radius: 0px 10px 10px 0px;
           padding: 20px;
           width: 20%;
-          left: -30%;
+          left: -24%;
           margin-top: 12px;
         }
       }
 
       @keyframes tag {
         0% {
-          width: 12%;
+          width: 10%;
         }
         5% {
-          width: 20%;
+          width: 15%;
         }
         33% {
-          width: 20%;
+          width: 15%;
         }
         38% {
-          width: 12%;
+          width: 10%;
         }
         100% {
-          width: 12%;
+          width: 10%;
         }
       }
 
       .mission-text div::before {
-        width: 12%;
+        width: 10%;
         animation: tag 15s ease infinite;
       }
 
@@ -394,6 +400,10 @@ body {
       }
 
       .mission-image {
+        position: relative;
+        width: 100%;
+        padding-left: 10%;
+
         .img-2,
         .img-3 {
           visibility: hidden;
@@ -534,15 +544,17 @@ body {
   }
 
   .our-team {
+    display: block;
     background: url("../images/home/content/team/bg-black.svg");
     width: 100%;
-    display: block;
-    position: absolute;
-    top: 53em;
+    height: max-content;
+    padding-bottom: 10%;
 
     .team-title {
+      position: relative;
       display: flex;
       margin: 72px 0px 0px 72px;
+      padding-top: 72px;
 
       .title-border {
         margin-left: 25px;
@@ -571,9 +583,9 @@ body {
         content: "";
         position: absolute;
         bottom: 0;
-        top: 4%;
-        left: 580px;
-        height: 9%;
+        top: 30%;
+        left: 504px;
+        height: 65%;
         font-size: 22px;
         padding: var(--content-border-padding);
         background-size: var(--content-border-background-size);
@@ -596,6 +608,7 @@ body {
       display: block;
 
       .container {
+        position: relative;
         width: 100%;
         height: 100%;
         display: block;
@@ -611,7 +624,7 @@ body {
         border: none;
         outline: inherit;
         right: 50px;
-        top: 26em;
+        top: 3em;
         z-index: 11;
       }
 
@@ -623,7 +636,7 @@ body {
         border: none;
         outline: inherit;
         right: 0px;
-        top: 26em;
+        top: 3em;
         z-index: 11;
       }
 
@@ -798,16 +811,15 @@ body {
   }
 
   .articles {
-    position: absolute;
-    top: 124em;
     margin-left: 14%;
+    padding-top: 72px;
     width: 100%;
 
     .articles-title {
       background: url("../images/home/content/mission/carrés.png") no-repeat;
       background-size: 100% 45%;
       position: absolute;
-      padding-right: 80px;
+      padding-right: 50px;
 
       p {
         position: relative;
@@ -901,7 +913,7 @@ body {
             font-size: clamp(1rem, 1.1vw, 1.1rem);
             color: #ea41be;
             border-radius: 50px;
-            margin:0px 0px 12px 8px;
+            margin: 0px 0px 12px 8px;
           }
 
           .chip-color {
@@ -938,15 +950,6 @@ body {
       .mission-title {
         p {
           padding-left: 32px;
-        }
-      }
-
-      .mission-content {
-        .mission-text {
-          width: 80%;
-          div::before {
-            left: -35%;
-          }
         }
       }
     }
@@ -988,27 +991,38 @@ body {
     }
 
     .mission {
+      height: 500px;
+      padding-top: 32px;
       .mission-content {
         width: 73vw;
         .mission-image {
-          width: 30%;
+          width: 100%;
           .img-1,
           .img-2,
           .img-3 {
+            img {
+              width: 100%;
+            }
+
             &::before {
-              width: 25%;
+              width: 50%;
               height: 50%;
             }
             &::after {
               display: block;
-              width: 12%;
-              bottom: 76px;
+              width: 18%;
+              bottom: 93px;
             }
           }
         }
 
         .mission-text {
-          width: 60%;
+          width: 100%;
+          .mission-text-1::before,
+          .mission-text-2::before,
+          .mission-text-3::before {
+            left: -30%;
+          }
         }
       }
     }
@@ -1022,7 +1036,7 @@ body {
         }
 
         &::after {
-          left: 460px;
+          left: 400px;
         }
       }
       .team-presentation {
@@ -1123,6 +1137,9 @@ body {
     }
 
     .mission {
+      padding-top: 32px;
+      height: 100%;
+
       .mission-title {
         p {
           left: 8px;
@@ -1137,8 +1154,10 @@ body {
       }
 
       .mission-content {
+        top: 15%;
         flex-direction: column;
         .mission-text {
+          width: 80%;
           &::before {
             width: 18%;
           }
@@ -1148,27 +1167,34 @@ body {
           .mission-text-3 {
             width: 85%;
           }
+
+          .mission-text-1::before,
+          .mission-text-2::before,
+          .mission-text-3::before {
+            left: -26%;
+          }
         }
 
         .mission-image {
-          padding-top: 32px;
+          height: 25vh;
           .img-1,
           .img-2,
           .img-3 {
             img {
-              width: 80%;
+              width: 56%;
             }
+
             &::before {
               transform: translate(-20px);
               width: 45%;
-              height: 33%;
+              height: 63%;
             }
 
             &::after {
-              height: 30%;
-              width: 22%;
-              bottom: -250px;
-              margin-left: -26px;
+              height: 26%;
+              width: 16%;
+              bottom: 18px;
+              margin-left: -15px;
             }
           }
         }
@@ -1176,9 +1202,10 @@ body {
     }
 
     .our-team {
-      top: 68em;
+      padding-bottom: 15%;
       .team-title {
         margin-left: 10px;
+        padding-top: 48px;
         .title-border {
           &::before,
           &::after {
@@ -1193,7 +1220,6 @@ body {
 
         &::after {
           left: 385px;
-          top: 5%;
         }
       }
       .team-sub-title {
@@ -1202,6 +1228,7 @@ body {
       }
 
       .team-presentation {
+        padding: 23px 0px 0px 0px;
         .scroll-left,
         .scroll-right {
           display: none;
