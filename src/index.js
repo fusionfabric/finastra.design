@@ -33,3 +33,31 @@ window.addEventListener("mousemove", e => {
   gsap.to(".img3 ", {x: -(0.080*pos), duration: 1});
   gsap.to(".crop-mark ", {x: -(0.075*pos), duration: 1});
 });
+
+
+var button = document.getElementsByClassName('scroll-right')[0];
+button.onclick = function () {
+    var container = document.getElementsByClassName('carousel')[0];
+    scroll(container,'right',25,100,10);
+};
+
+var back = document.getElementsByClassName('scroll-left')[0];
+back.onclick = function () {
+    var container = document.getElementsByClassName('carousel')[0];
+    scroll(container,'left',25,100,10);
+};
+
+function scroll(element,direction,speed,distance,step){
+   var scrollAmount = 0;
+    var scrollTimer = setInterval(function(){
+        if(direction == 'left'){
+            element.scrollLeft -= step;
+        } else {
+            element.scrollLeft += step;
+        }
+        scrollAmount += step;
+       if(scrollAmount >= distance){
+            window.clearInterval(scrollTimer);
+        }
+    }, speed);
+}
