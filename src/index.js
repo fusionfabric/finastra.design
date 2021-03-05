@@ -38,13 +38,13 @@ window.addEventListener("mousemove", e => {
 var button = document.getElementsByClassName('scroll-right')[0];
 button.onclick = function () {
     var container = document.getElementsByClassName('carousel')[0];
-    scroll(container,'right',25,100,10);
+    scroll(container,'right',10,1000,20);
 };
 
 var back = document.getElementsByClassName('scroll-left')[0];
 back.onclick = function () {
     var container = document.getElementsByClassName('carousel')[0];
-    scroll(container,'left',25,100,10);
+    scroll(container,'left',10,1000,20);
 };
 
 function scroll(element,direction,speed,distance,step){
