@@ -121,6 +121,13 @@ body {
       right: 6%;
     }
   }
+
+  .link {
+    position: absolute;
+    top: 87%;
+    right: 30%;
+    z-index: -1;
+  }
 }
 
 .content {
@@ -491,7 +498,7 @@ body {
         0% {
           transform: translate(100%, 30%);
         }
-        10% {
+        6% {
           transform: translate(30%, 30%);
           transform: rotate(-6deg);
         }
@@ -753,7 +760,7 @@ body {
               .job {
                 display: block;
                 font: 20px/31px Futura;
-                font-size: clamp(0.8rem, 1.1vw, 1.1rem);
+                font-size: clamp(0.7rem, 1vw, 1rem);
               }
             }
 
@@ -765,7 +772,7 @@ body {
               span {
                 align-self: center;
                 font: 15px/31px Futura;
-                font-size: clamp(0.7rem, 1vw, 1rem);
+                font-size: clamp(0.6rem, 1vw, 1rem);
               }
             }
           }
@@ -901,10 +908,21 @@ body {
         padding-right: 10px;
         padding-left: 18px;
 
+        a {
+          text-decoration: none;
+        }
+        a:visited {
+          color: black;
+        }
+
         .chip-list {
           display: flex;
           flex-wrap: wrap;
           margin-left: -14px;
+
+          a {
+            text-decoration: none;
+          }
 
           .chip {
             border: 0.1rem solid #ea41be;
@@ -916,7 +934,7 @@ body {
             margin: 0px 0px 12px 8px;
           }
 
-          .chip:hover,.chip:active {
+          .chip:hover {
             background-color: #ea41be;
             color: white;
           }
@@ -926,7 +944,7 @@ body {
             border-color: #28a9ea;
           }
 
-          .chip-color:hover,.chip-color:active  {
+          .chip-color:hover {
             background-color: #28a9ea;
             color: white;
           }
@@ -938,91 +956,9 @@ body {
         }
         .article-text {
           font: 300 24px/30px Roboto;
-          font-size: clamp(1rem, 1.5vw, 1.5rem);
+          font-size: clamp(1rem, 1.3vw, 1.3rem);
         }
       }
-    }
-  }
-}
-.footer {
-  position: relative;
-  background: url("../images/home/content/team/bg-black.svg");
-  width: 100%;
-  height: 700px;
-
-  .footer-title {
-    color: #34b9ca;
-    font: 700 44px/52px Futura;
-    font-size: clamp(1.5rem, 2.7vw, 2.7rem);
-    text-align: center;
-    padding: 132px 32px 0 32px ;
-  }
-
-  .contact {
-    position: absolute;
-    display: inline-block;
-    color: white;
-    border: 0.2rem solid #34B9CA;
-    border-radius: 50px;
-    padding: 16px 92px 16px 72px;
-    font: 700 35px/52px Futura;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%);
-    cursor: pointer;
-    img {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    span {
-      margin-right: 16px;
-      font-size: clamp(1rem, 1.8vw, 1.8rem);
-    }
-  }
-
-  .footer-links {
-    position: absolute;
-    display: inline-block;
-    color: white;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    width: fit-content;
-
-    .footer-name {
-      font: 300 24px/46px Roboto;
-      font-size: clamp(1.2rem, 1.8vw, 1.8rem);
-      color: white;
-      text-align: center;
-    }
-
-    .footer-list {
-      display: flex;
-      width: max-content;
-      font: 300 18px/52px Roboto;
-      font-size: clamp(0.8rem, 1.3vw, 1.3rem);
-      list-style-type: none;
-
-      li {
-        cursor: pointer;
-        text-align: center;
-        margin: 0 15px 0 0;
-      }
-    }
-  }
-
-  .socials-icons {
-    position: absolute;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    padding-right: 48px;
-
-    img {
-      display: block;
-      margin-bottom: 15px;
-      cursor: pointer;
     }
   }
 }
@@ -1212,6 +1148,11 @@ body {
         right: unset;
         bottom: 5%;
         left: -5%;
+      }
+    }
+    .link {
+      img {
+        height: 190px;
       }
     }
   }
