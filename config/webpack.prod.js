@@ -4,6 +4,7 @@ const common = require('./webpack.common.js')
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -20,6 +21,11 @@ module.exports = merge(common, {
       filename: 'styles/[name].[contenthash].css',
       chunkFilename: '[id].css',
     }),
+    new HtmlWebpackPartialsPlugin({
+      path:paths.analytics + '/google-analytics.html',
+      location: 'head',
+      priority: 'high'
+    })
   ],
   module: {
     rules: [
