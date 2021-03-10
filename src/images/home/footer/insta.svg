@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">
+  <g id="Circle_Button_" data-name="Circle Button " transform="translate(0 0.495)">
+    <rect id="Area" width="52" height="52" rx="26" transform="translate(0 -0.495)" fill="#34b9ca"/>
+    <g id="Group_299" data-name="Group 299" transform="translate(14 13.506)">
+      <path id="Path_256" data-name="Path 256" d="M20,0H4A4,4,0,0,0,0,4V20a4,4,0,0,0,4,4H20a4,4,0,0,0,4-4V4A4,4,0,0,0,20,0Zm2,20a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V4A2,2,0,0,1,4,2H20a2,2,0,0,1,2,2Z" fill="#fff"/>
+      <path id="Path_257" data-name="Path 257" d="M12,6a6,6,0,1,0,6,6A6,6,0,0,0,12,6Zm0,10a4,4,0,1,1,4-4A4,4,0,0,1,12,16Z" fill="#fff"/>
+      <circle id="Ellipse_41" data-name="Ellipse 41" cx="1.5" cy="1.5" r="1.5" transform="translate(17 4)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
