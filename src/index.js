@@ -34,29 +34,61 @@ window.addEventListener("mousemove", e => {
   gsap.to(".crop-mark ", {x: -(0.075*pos), duration: 1});
 });
 
+var container = document.getElementsByClassName("carousel")[0];
+var back = document.getElementsByClassName("scroll-left")[0];
+var next = document.getElementsByClassName("scroll-right")[0];
 
-var button = document.getElementsByClassName('scroll-right')[0];
-button.onclick = function () {
-    var container = document.getElementsByClassName('carousel')[0];
-    scroll(container,'right',10,1000,20);
+back.style.opacity = "0.5";
+
+/*scroll without buttons*/
+container.onscroll = function () {
+  next.style.opacity = "1";
+
+  if (container.clientWidth + container.scrollLeft == container.scrollWidth) {
+    next.style.opacity = "0.5";
+    back.style.opacity = "1";
+  }
+
+  if (container.scrollLeft == 0) {
+    next.style.opacity = "1";
+    back.style.opacity = "0.5";
+  }
+
+  if (container.scrollLeft > 0) {
+    back.style.opacity = "1";
+  }
 };
 
-var back = document.getElementsByClassName('scroll-left')[0];
+/*scroll with buttons*/
+//next button
+next.onclick = function () {
+  if (container.clientWidth + container.scrollLeft == container.scrollWidth) {
+    next.style.opacity = "0.5";
+  }
+  scroll(container, "right", 10, 1000, 20);
+};
+
+//back button
 back.onclick = function () {
-    var container = document.getElementsByClassName('carousel')[0];
-    scroll(container,'left',10,1000,20);
+  next.style.opacity = "1";
+  if (container.scrollLeft == 1000 || container.scrollLeft == 0) {
+    back.style.opacity = "0.5";
+  }
+  scroll(container, "left", 10, 1000, 20);
 };
 
-function scroll(element,direction,speed,distance,step){
+function scroll(element, direction, speed, distance, step) {
    var scrollAmount = 0;
-    var scrollTimer = setInterval(function(){
-        if(direction == 'left'){
+  var scrollTimer = setInterval(function () {
+    if (direction == "left") {
             element.scrollLeft -= step;
         } else {
+      back.style.opacity = "1";
             element.scrollLeft += step;
         }
         scrollAmount += step;
-       if(scrollAmount >= distance){
+
+    if (scrollAmount >= distance) {
             window.clearInterval(scrollTimer);
         }
     }, speed);
